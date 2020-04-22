@@ -1,0 +1,568 @@
+{
+  "Operators": {
+    "Mori the Piercer": {
+      "century": 1800,
+      "sex": "m",
+      "price": "2m 1x",
+      "defenese": 1,
+      "abilities": [
+        {
+          "price": "1x",
+          "Text": "Strike [1] After the strike, Mori must move downstream"
+        },
+        {
+          "price": "1m 1x",
+          "Text": "Disintegrate a female operator with 2 defense or less"
+        },
+        {
+          "price": "2m 1x",
+          "Text": "Move and Strike [2] if Mori already moved this turn"
+        }
+      ],
+      "Special": "Once Mori uses the move action he may Strike [1]",
+      "flavor-text": "I live by a code. The code says nothing about time travel."
+    },
+    "Ben Storm": {
+      "century": 2000,
+      "sex": "m",
+      "price": "2ms",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1ms",
+          "Text": "Strike [1] and push target downstream"
+        },
+        {
+          "price": "2ms",
+          "Text": "Ambush: Strike [2] any operator that move into his turnpoint on opponent's next turn"
+        },
+        {
+          "price": "2ms",
+          "Text": "Turn a human operator into a drone"
+        }
+      ],
+      "flavor-text": "You think my ambitions are twisted? You haven't met my twin sister."
+    },
+    "Angela Storm": {
+      "century": 2000,
+      "sex": "f",
+      "price": "3mp",
+      "defenese": 3,
+      "abilities": [
+        {
+          "price": "1mp",
+          "Text": "Strike [1] and push target upstream"
+        },
+        {
+          "price": "2mp",
+          "Text": "Take control of opponent's drone for 2 turns"
+        },
+        {
+          "price": "3mp",
+          "Text": "Disable all male operators in her turnpoint"
+        }
+      ],
+      "flavor-text": "Ask me if this is the worst I can do. Please!"
+    },
+    "Akane": {
+      "century": 2100,
+      "sex": "f",
+      "price": "2p",
+      "defenese": 3,
+      "abilities": [
+        {
+          "price": "1p",
+          "Text": "Haven: Activate a disabled operator and give them +1 defense [until next turn]"
+        },
+        {
+          "price": "1p 1x",
+          "Text": "Disable all male operators [until next turn]"
+        },
+        {
+          "price": "2p",
+          "Text": "Take opponent's operator under your control [until next turn]"
+        }
+      ],
+      "Special": "If Red Eye is in the same turnpoint with Mori, she must move away by the end of the turn, even if she has already moved.",
+      "flavor-text": "Not like this' I asked, but he had two needs of me."
+    },
+    "Jerusalem [AI]": {
+      "century": 2200,
+      "sex": "x",
+      "price": "3ms",
+      "defenese": 5,
+      "abilities": [
+        {
+          "price": "1ms",
+          "Text": "Disable an AI or drone operator [until next turn]"
+        },
+        {
+          "price": "2ms",
+          "Text": "Mark & Destroy: Disintegrate an operator with 1 defense"
+        },
+        {
+          "price": "3ms",
+          "Text": "Strike [4] to a hideout"
+        }
+      ],
+      "flavor-text": "You made me a false idol, but I became a true god."
+    },
+    "Samarkand [Conglomerate AI]": {
+      "century": 2200,
+      "sex": "x",
+      "price": "5x",
+      "defenese": "5*",
+      "abilities": [
+        {
+          "price": "2x",
+          "Text": "Lockdown: opponent's operators can't move in or out of Samarkand turnpoint"
+        },
+        {
+          "price": "3x",
+          "Text": "Break down into 3 Tamerlans"
+        },
+        {
+          "price": "5x",
+          "Text": "Send all operators on the board to their original stream and epoch"
+        }
+      ],
+      "Special": "Cannot move downstream. *For each disintegrated Tamerlan, Samarkand has 1 less defense on reintegration",
+      "flavor-text": "24 of us want to follow you, 7 disagree, and 3 want to kill you."
+    },
+    "Tamerlan [Drone, part of Samarkand]": {
+      "century": null,
+      "sex": "x",
+      "price": "1s",
+      "defenese": 1,
+      "abilities": [
+        {
+          "price": "1m",
+          "Text": "Strike [1]"
+        },
+        {
+          "price": "2x",
+          "Text": "Give another Tamerlan on the board +1 Strike [once per turn, until next turn]"
+        },
+        {
+          "price": "1s",
+          "Text": "Re-integrate Tamerlans back into Samarkand [all Tamerlans must be in the same turnpoint]"
+        }
+      ],
+      "Special": "Can move 2 times in a turn",
+      "flavor-text": "We came. We saw. We conquered."
+    },
+    "Striker [Drone, Orbital Strike Team]": {
+      "century": 2200,
+      "sex": "x",
+      "price": "3ms",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1ms",
+          "Text": "Strike [1] one century up or down-stream"
+        },
+        {
+          "price": "2ms",
+          "Text": "Armor up: gain +2 defense"
+        },
+        {
+          "price": "3ms",
+          "Text": "Strike [3]"
+        }
+      ],
+      "flavor-text": "I do not have higher functions."
+    },
+    "Mia Star [Orbital command]": {
+      "century": 2300,
+      "sex": "f",
+      "price": "4mp",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1mp",
+          "Text": "When moving, take an operator along. Does not count as a move action for that operator"
+        },
+        {
+          "price": "3mp",
+          "Text": "Give +1 defense to all Orbital Strike operators on the board"
+        },
+        {
+          "price": "4mp",
+          "Text": "Strike [2] 3 times"
+        }
+      ],
+      "flavor-text": "My mind is a star and my palms are solar sails."
+    },
+    "Augur, Stream-Phase Shaman [Orbital Strike Team]": {
+      "century": 2300,
+      "sex": "m",
+      "price": "2p 1x",
+      "defenese": 1,
+      "abilities": [
+        {
+          "price": "1x",
+          "Text": "Channel: switch Augur with any disintegrated operator. Switch back if disabled."
+        },
+        {
+          "price": "1p 1x",
+          "Text": "Phase-out: no ability can be used upon the target of this ability"
+        },
+        {
+          "price": "2p 1x",
+          "Text": "Stream-shade: create a double that mirrors Augur's actions in another stream, always in the same century. [see FAQ]"
+        }
+      ],
+      "Special": "Pay (1x) to prolong Augur's ability for 1 turn",
+      "flavor-text": "The dead call to me from the void between the streams. I feed the living to them."
+    },
+    "Dean (StreamHawk) Xi [Orbital Strike Team]": {
+      "century": 2300,
+      "sex": "m",
+      "price": "2m 2mp",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "2mp",
+          "Text": "Undo a strike action from opponent's previous turn."
+        },
+        {
+          "price": "3mp",
+          "Text": "Strike [2] across stream"
+        },
+        {
+          "price": "2m 2mp",
+          "Text": "Disintegrate an operator activated on opponent's previous turn"
+        }
+      ],
+      "Special": "Cannot be struck by female operators",
+      "flavor-text": "I adore women, the pinnacle of their free will is slavery. All they need is the right master."
+    },
+    "Reclaimer [Drone, Orbital Strike Team]": {
+      "century": "2300*",
+      "sex": "x",
+      "price": "1m 1x",
+      "defenese": 4,
+      "abilities": [
+        {
+          "price": "1m 1x",
+          "Text": "Strike [2]"
+        },
+        {
+          "price": "1m 1x",
+          "Text": "Lockdown: no operator can move in or out of Reclaimer's turnpoint"
+        },
+        {
+          "price": "1m 1x",
+          "Text": "Prevent spinning agenda [in its turnpoint]"
+        }
+      ],
+      "Special": "*Can be activated in any turnpoint but cannot move on it's own",
+      "flavor-text": "Make room. Or don't."
+    },
+    "Disruptor [Drone, Orbital Strike Team]": {
+      "century": 2100,
+      "sex": "x",
+      "price": "2x",
+      "defenese": 1,
+      "abilities": [
+        {
+          "price": "2x",
+          "Text": "Prevents stream-step into its location"
+        },
+        {
+          "price": "2x",
+          "Text": "Prevents upstream movement into its location"
+        },
+        {
+          "price": "2x",
+          "Text": "Prevents downstream movement into its location"
+        }
+      ],
+      "flavor-text": "Access denied."
+    },
+    "Sourayah the Bad Prophet": {
+      "century": 1800,
+      "sex": "f",
+      "price": "1p 2x",
+      "defenese": 3,
+      "abilities": [
+        {
+          "price": "1p 1x",
+          "Text": "Select a turnpoint upstream. A random* operator there gets +2 defense"
+        },
+        {
+          "price": "1p 1x",
+          "Text": "Select a turnpoint upstream. A random* operator there gets -2 defense"
+        },
+        {
+          "price": "1p 2x",
+          "Text": "Dark visions: choose a male operator upstream. During opponent's next turn that operator can't move and must use Strike ability on anyone he can."
+        }
+      ],
+      "Special": "Cannot move upstream. *random: see rules FAQ",
+      "flavor-text": "They all think they need me, freely willing to sacrifice so much. This is how my gift works."
+    },
+    "Aran [Unit 707 stealth-fighter]": {
+      "century": 1900,
+      "sex": "m",
+      "price": "1m 1x",
+      "defenese": 1,
+      "abilities": [
+        {
+          "price": "2m",
+          "Text": "Strike [3]"
+        },
+        {
+          "price": "3m",
+          "Text": "Strike [2] to any operator that used an ability preventing them from being attacked"
+        },
+        {
+          "price": "1m 1x",
+          "Text": "Move into turnpoint that is restricted by a movement-preventing ability"
+        }
+      ],
+      "flavor-text": "I am like the ham'sin: desert wind, dust, and pain."
+    },
+    "Sahar [Unit 707 medic]": {
+      "century": 2000,
+      "sex": "f",
+      "price": "1m 1sp",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1x",
+          "Text": "Reactivate a disabled operator from Unit 707"
+        },
+        {
+          "price": "2sp",
+          "Text": "Reactivate any disabled operator and take control of them [until next turn]"
+        },
+        {
+          "price": "1m 1sp",
+          "Text": "Reactivate all disabled operators in stream [until next turn]"
+        }
+      ],
+      "Special": "Can move 2 times in a turn",
+      "flavor-text": "If the desert sand does not do it first, I will drink all your body fluids."
+    },
+    "Hamdi [Unit 707 support]": {
+      "century": 2000,
+      "sex": "m",
+      "price": "2m 1x",
+      "defenese": 4,
+      "abilities": [
+        {
+          "price": "1x",
+          "Text": "Give +1 defense to an operator from Unit 707"
+        },
+        {
+          "price": "1m 1x",
+          "Text": "Give +1 defense to any operator"
+        },
+        {
+          "price": "2m 1x",
+          "Text": "Strike [3]"
+        }
+      ],
+      "flavor-text": "Blood sometimes gets mixed in my black coffee, I like the taste."
+    },
+    "Marwa [Unit 707 commander]": {
+      "century": 2100,
+      "sex": "f",
+      "price": "3ms",
+      "defenese": 3,
+      "abilities": [
+        {
+          "price": "1ms",
+          "Text": "Move a unit 707 operator from current to any turnpoint"
+        },
+        {
+          "price": "2ms",
+          "Text": "Recall: move all operators of unit 707 to her location"
+        },
+        {
+          "price": "3ms",
+          "Text": "Disable all female operators in her turnpoint"
+        }
+      ],
+      "Special": "All members of unit 707 can be activated on the commander's location instead of their century",
+      "flavor-text": "Some women thought I was too ugly to give commands."
+    },
+    "Dr. Koh": {
+      "century": 2200,
+      "sex": "f/m",
+      "price": "2s 2x",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1x",
+          "Text": "Permanently change the sex of an operator"
+        },
+        {
+          "price": "1s 1x",
+          "Text": "Viral decay: all operators on the board get -1 defense"
+        },
+        {
+          "price": "2s 2x",
+          "Text": "Bring back a disintegrated operator, put them in 2200"
+        }
+      ],
+      "flavor-text": "You see yourself as a whole, in form and mind, but you are not. Let me show you."
+    },
+    "Ben Storm [AI]": {
+      "century": 2100,
+      "sex": "x",
+      "price": "2s 1x",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1x",
+          "Text": "Make a turnpoint any type of agenda until end of your turn"
+        },
+        {
+          "price": "1s 1x",
+          "Text": "Prevent an operator anywhere from moving [until next turn]"
+        },
+        {
+          "price": "2s 1x",
+          "Text": "Undo an action from opponent's previous turn [once per turn]"
+        }
+      ],
+      "Special": "When activated, disable Ben and Angela Storm [until next turn]",
+      "flavor-text": "Join me outside the box, dead and alive."
+    },
+    "Captain Shortspear": {
+      "century": 1800,
+      "sex": "m",
+      "price": "3ms",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "2ms",
+          "Text": "Strike [2]"
+        },
+        {
+          "price": "2ms",
+          "Text": "Move. After moving can't be a target of any ability [until next turn]"
+        },
+        {
+          "price": "3ms",
+          "Text": "Strike [2] at 2 targets"
+        }
+      ],
+      "flavor-text": "You won't pick me out in a crowd, not until my pistol is in your face."
+    },
+    "Soren Glasskin": {
+      "century": 1800,
+      "sex": "m",
+      "price": "3x",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1x",
+          "Text": "Use an ability that any other other operator [in his turnpoint] may use [must pay it's price]"
+        },
+        {
+          "price": "2x",
+          "Text": "Use an ability that any other operator in the same stream may use [must pay its price]"
+        },
+        {
+          "price": "3x",
+          "Text": "Take control of an opponent's operator while opponent controls Soren for 2 turns"
+        }
+      ],
+      "flavor-text": "You keep calling me Soren, you really shouldn't."
+    },
+    "The Gray Baron": {
+      "century": 1900,
+      "sex": "f",
+      "price": "1p 2x",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1p 1x",
+          "Text": "Strike [2]"
+        },
+        {
+          "price": "1p 1x",
+          "Text": "Spin agenda instantly without ripple effect"
+        },
+        {
+          "price": "1p 2x",
+          "Text": "Truce: make all friendly operators untouchable by any ability [until next turn]"
+        }
+      ],
+      "flavor-text": "Men of power cast dark shadows. The closer a woman gets, the easier for her to hide in them."
+    },
+    "Dr. Archangel": {
+      "century": 1900,
+      "sex": "f",
+      "price": "2m 1x",
+      "defenese": 2,
+      "abilities": [
+        {
+          "price": "1m",
+          "Text": "Disintegrate an operator disabled on this turn"
+        },
+        {
+          "price": "1m 1x",
+          "Text": "Give Mr. Archangel +2 defense"
+        },
+        {
+          "price": "2m 1x",
+          "Text": "Disable an operator [until next turn]"
+        }
+      ],
+      "flavor-text": "They never suspect."
+    },
+    "Mr. Archangel": {
+      "century": 1900,
+      "sex": "m",
+      "price": "2s",
+      "defenese": 1,
+      "abilities": [
+        {
+          "price": "1s",
+          "Text": "Create a drone with Strike [1] (1m)/ 1 Defense"
+        },
+        {
+          "price": "1s 2x",
+          "Text": "Augment: Give another operator +2 for their next Strike"
+        },
+        {
+          "price": "2s",
+          "Text": "EMP Strike: Disable all opponent's drones [in his turnpoint, until next turn]"
+        }
+      ],
+      "Special": "Can build up to 3 drones. Drones destroyed on any strike or when Mr. Archangel is disabled",
+      "flavor-text": "If the devil grants you your wish, is he still the devil? Or do you become the devil by paying his price?"
+    }
+  },
+  "Hideouts": {
+    "SSV-93 Ural": {
+      "century": 2300,
+      "defenese": 10,
+      "active": "Move up/downstream",
+      "price": "1x",
+      "passive": "Doubles the activated agenda [on Ural's turnpoint, once per turn]",
+      "flavor-text": "Tovarisch Capitan, we're in range of their missiles Keep course, they won't see us in range of their fists!"
+    },
+    "Zongshan": {
+      "century": 2200,
+      "defenese": 11,
+      "active": "Send operator to any turnpoint",
+      "price": "2x",
+      "passive": "Turns activated agenda to any type [on Zongshan's turnpoint, once per turn]",
+      "flavor-text": "Too many changes impede progress; we need silence."
+    },
+    "Avalon": {
+      "century": 2100,
+      "defenese": 9,
+      "active": "Move up/downstream. All operators and hideouts move along with Avalon",
+      "price": "2x",
+      "passive": "Can be activated as an agenda providing (1x)",
+      "Special": "Phased-out: Positioned as if located in a third stream between the 2 players. [see FAQ]",
+      "flavor-text": "One day this will be the busiest black market in our solar system; we need only to keep it hidden for a century."
+    }
+  }
+}

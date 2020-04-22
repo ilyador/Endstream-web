@@ -1,6 +1,6 @@
 {
   "name": "endstream",
-  "version": "0.1.0",
+  "version": "0.9.6",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,6 +13,7 @@
     "firebase-functions": "^3.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-preload": "^0.6.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
