@@ -22,17 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#amplify
-amplify/\#current-cloud-backend
-amplify/.config/local-*
-amplify/mock-data
-amplify/backend/amplify-meta.json
-amplify/backend/awscloudformation
-build/
-dist/
-node_modules/
-aws-exports.js
-awsconfiguration.json
-amplifyconfiguration.json
-amplify-gradle-config.json
-amplifyxc.config
+#firebase
+firebase-config.js
+endstream-2824f-875fdaabc779.json
