@@ -2,13 +2,11 @@ import React, { useEffect } from 'react'
 import { db } from './firebase'
 import axios from 'axios'
 import Preload from 'react-preload'
-import 'modern-css-reset'
-import { images, imageArray } from './load-images'
+import { illustrations, imageArray } from './load-images'
 
-console.log(images)
 
-const URL = (process.env.NODE_ENV !== 'production') ? 'REACT_APP_FUNCTIONS_URL_LOCAL' : 'REACT_APP_FUNCTIONS_URL'
-const BASE_URL = process.env[URL]
+const ENV_URL = (process.env.NODE_ENV !== 'production') ? 'REACT_APP_FUNCTIONS_URL_LOCAL' : 'REACT_APP_FUNCTIONS_URL'
+const BASE_URL = process.env[ENV_URL]
 
 const functionURLs = {
   addUser: BASE_URL + '/add-user'
@@ -43,7 +41,7 @@ function App () {
         autoResolveDelay={3000}
       >
         <div>
-          <img src={images['big/Mori-the-Piercer']} alt="Mori" />
+          <img src={illustrations['big/Mori-the-Piercer']} alt="Mori" />
         </div>
       </Preload>
     </div>
