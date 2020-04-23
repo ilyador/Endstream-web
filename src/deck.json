@@ -1,6 +1,8 @@
 {
-  "Operators": {
-    "Mori the Piercer": {
+  "Operators": [
+    {
+      "name": "Mori the Piercer",
+      "illustration": "Mori-the-Piercer",
       "century": 1800,
       "sex": "m",
       "price": "2m 1x",
@@ -19,10 +21,12 @@
           "Text": "Move and Strike [2] if Mori already moved this turn"
         }
       ],
-      "Special": "Once Mori uses the move action he may Strike [1]",
+      "special": "Once Mori uses the move action he may Strike [1]",
       "flavor-text": "I live by a code. The code says nothing about time travel."
     },
-    "Ben Storm": {
+    {
+      "name": "Ben Storm",
+      "illustration": "Ben-Storm",
       "century": 2000,
       "sex": "m",
       "price": "2ms",
@@ -43,7 +47,9 @@
       ],
       "flavor-text": "You think my ambitions are twisted? You haven't met my twin sister."
     },
-    "Angela Storm": {
+    {
+      "name": "Angela Storm",
+      "illustration": "Angela-Storm",
       "century": 2000,
       "sex": "f",
       "price": "3mp",
@@ -64,7 +70,9 @@
       ],
       "flavor-text": "Ask me if this is the worst I can do. Please!"
     },
-    "Akane": {
+    {
+      "name": "Akane",
+      "illustration": "Akane",
       "century": 2100,
       "sex": "f",
       "price": "2p",
@@ -83,10 +91,13 @@
           "Text": "Take opponent's operator under your control [until next turn]"
         }
       ],
-      "Special": "If Red Eye is in the same turnpoint with Mori, she must move away by the end of the turn, even if she has already moved.",
+      "special": "If Red Eye is in the same turnpoint with Mori, she must move away by the end of the turn, even if she has already moved.",
       "flavor-text": "Not like this' I asked, but he had two needs of me."
     },
-    "Jerusalem [AI]": {
+    {
+      "name": "Jerusalem",
+      "illustration": "Jerusalem",
+      "type": "AI",
       "century": 2200,
       "sex": "x",
       "price": "3ms",
@@ -107,7 +118,11 @@
       ],
       "flavor-text": "You made me a false idol, but I became a true god."
     },
-    "Samarkand [Conglomerate AI]": {
+    {
+      "name": "Samarkand",
+      "illustration": "Samarkand",
+      "type": "AI",
+      "sub-type": "Conglomerate",
       "century": 2200,
       "sex": "x",
       "price": "5x",
@@ -126,10 +141,14 @@
           "Text": "Send all operators on the board to their original stream and epoch"
         }
       ],
-      "Special": "Cannot move downstream. *For each disintegrated Tamerlan, Samarkand has 1 less defense on reintegration",
+      "special": "Cannot move downstream. *For each disintegrated Tamerlan, Samarkand has 1 less defense on reintegration",
       "flavor-text": "24 of us want to follow you, 7 disagree, and 3 want to kill you."
     },
-    "Tamerlan [Drone, part of Samarkand]": {
+    {
+      "name": "Tamerlan",
+      "illustration": "Tamerlan",
+      "type": "Drone",
+      "sub-type": "part of Samarkand",
       "century": null,
       "sex": "x",
       "price": "1s",
@@ -148,10 +167,14 @@
           "Text": "Re-integrate Tamerlans back into Samarkand [all Tamerlans must be in the same turnpoint]"
         }
       ],
-      "Special": "Can move 2 times in a turn",
+      "special": "Can move 2 times in a turn",
       "flavor-text": "We came. We saw. We conquered."
     },
-    "Striker [Drone, Orbital Strike Team]": {
+    {
+      "name": "The Pale Man",
+      "illustration": "The-Pale-Man",
+      "type": "AI",
+      "sub-type": "Orbital Strike Team",
       "century": 2200,
       "sex": "x",
       "price": "3ms",
@@ -172,7 +195,11 @@
       ],
       "flavor-text": "I do not have higher functions."
     },
-    "Mia Star [Orbital command]": {
+    {
+      "name": "Mia Star",
+      "illustration": "Mia-Star",
+      "type": "Commander",
+      "sub-type": "Orbital Strike Team",
       "century": 2300,
       "sex": "f",
       "price": "4mp",
@@ -193,7 +220,10 @@
       ],
       "flavor-text": "My mind is a star and my palms are solar sails."
     },
-    "Augur, Stream-Phase Shaman [Orbital Strike Team]": {
+    {
+      "name": "Augur, Stream Phase Shaman",
+      "illustration": "Augur",
+      "sub-type": "Orbital Strike Team",
       "century": 2300,
       "sex": "m",
       "price": "2p 1x",
@@ -212,10 +242,13 @@
           "Text": "Stream-shade: create a double that mirrors Augur's actions in another stream, always in the same century. [see FAQ]"
         }
       ],
-      "Special": "Pay (1x) to prolong Augur's ability for 1 turn",
+      "special": "Pay (1x) to prolong Augur's ability for 1 turn",
       "flavor-text": "The dead call to me from the void between the streams. I feed the living to them."
     },
-    "Dean (StreamHawk) Xi [Orbital Strike Team]": {
+    {
+      "name": "Kim-Li",
+      "illustration": "Kim-Li",
+      "sub-type": "Orbital Strike Team",
       "century": 2300,
       "sex": "m",
       "price": "2m 2mp",
@@ -234,10 +267,14 @@
           "Text": "Disintegrate an operator activated on opponent's previous turn"
         }
       ],
-      "Special": "Cannot be struck by female operators",
+      "special": "Cannot be struck by female operators",
       "flavor-text": "I adore women, the pinnacle of their free will is slavery. All they need is the right master."
     },
-    "Reclaimer [Drone, Orbital Strike Team]": {
+    {
+      "name": "Reclaimer",
+      "illustration": "Reclaimer",
+      "type": "Drone",
+      "sub-type": "Orbital Strike Team",
       "century": "2300*",
       "sex": "x",
       "price": "1m 1x",
@@ -256,10 +293,14 @@
           "Text": "Prevent spinning agenda [in its turnpoint]"
         }
       ],
-      "Special": "*Can be activated in any turnpoint but cannot move on it's own",
+      "special": "*Can be activated in any turnpoint but cannot move on it's own",
       "flavor-text": "Make room. Or don't."
     },
-    "Disruptor [Drone, Orbital Strike Team]": {
+    {
+      "name": "Disruptor",
+      "illustration": "Disruptor",
+      "type": "Drone",
+      "sub-type": "Orbital Strike Team",
       "century": 2100,
       "sex": "x",
       "price": "2x",
@@ -280,7 +321,9 @@
       ],
       "flavor-text": "Access denied."
     },
-    "Sourayah the Bad Prophet": {
+    {
+      "name": "Sourayah the Bad Prophet",
+      "illustration": "Sourayah",
       "century": 1800,
       "sex": "f",
       "price": "1p 2x",
@@ -299,10 +342,14 @@
           "Text": "Dark visions: choose a male operator upstream. During opponent's next turn that operator can't move and must use Strike ability on anyone he can."
         }
       ],
-      "Special": "Cannot move upstream. *random: see rules FAQ",
+      "special": "Cannot move upstream. *random: see rules FAQ",
       "flavor-text": "They all think they need me, freely willing to sacrifice so much. This is how my gift works."
     },
-    "Aran [Unit 707 stealth-fighter]": {
+    {
+      "name": "Aran",
+      "illustration": "Aran",
+      "type": "stealth-fighter",
+      "sub-type": "Unit 404",
       "century": 1900,
       "sex": "m",
       "price": "1m 1x",
@@ -323,7 +370,11 @@
       ],
       "flavor-text": "I am like the ham'sin: desert wind, dust, and pain."
     },
-    "Sahar [Unit 707 medic]": {
+    {
+      "name": "Sahar",
+      "illustration": "Sahar",
+      "type": "medic",
+      "sub-type": "Unit 404",
       "century": 2000,
       "sex": "f",
       "price": "1m 1sp",
@@ -342,10 +393,14 @@
           "Text": "Reactivate all disabled operators in stream [until next turn]"
         }
       ],
-      "Special": "Can move 2 times in a turn",
+      "special": "Can move 2 times in a turn",
       "flavor-text": "If the desert sand does not do it first, I will drink all your body fluids."
     },
-    "Hamdi [Unit 707 support]": {
+    {
+      "name": "Hamdi",
+      "illustration": "Hamdi",
+      "type": "support",
+      "sub-type": "Unit 404",
       "century": 2000,
       "sex": "m",
       "price": "2m 1x",
@@ -366,7 +421,11 @@
       ],
       "flavor-text": "Blood sometimes gets mixed in my black coffee, I like the taste."
     },
-    "Marwa [Unit 707 commander]": {
+    {
+      "name": "Marwa",
+      "illustration": "Marwa",
+      "type": "commander",
+      "sub-type": "Unit 404",
       "century": 2100,
       "sex": "f",
       "price": "3ms",
@@ -385,10 +444,12 @@
           "Text": "Disable all female operators in her turnpoint"
         }
       ],
-      "Special": "All members of unit 707 can be activated on the commander's location instead of their century",
+      "special": "All members of unit 707 can be activated on the commander's location instead of their century",
       "flavor-text": "Some women thought I was too ugly to give commands."
     },
-    "Dr. Koh": {
+    {
+      "name": "Dr. Koh",
+      "illustration": "Dr-Koh",
       "century": 2200,
       "sex": "f/m",
       "price": "2s 2x",
@@ -409,7 +470,10 @@
       ],
       "flavor-text": "You see yourself as a whole, in form and mind, but you are not. Let me show you."
     },
-    "Ben Storm [AI]": {
+    {
+      "name": "Ben Storm",
+      "illustration": "Ben-Storm-AI",
+      "type": "AI",
       "century": 2100,
       "sex": "x",
       "price": "2s 1x",
@@ -428,10 +492,12 @@
           "Text": "Undo an action from opponent's previous turn [once per turn]"
         }
       ],
-      "Special": "When activated, disable Ben and Angela Storm [until next turn]",
+      "special": "When activated, disable Ben and Angela Storm [until next turn]",
       "flavor-text": "Join me outside the box, dead and alive."
     },
-    "Captain Shortspear": {
+    {
+      "name": "Captain Shortspear",
+      "illustration": "Captain-Shortspearr",
       "century": 1800,
       "sex": "m",
       "price": "3ms",
@@ -452,7 +518,9 @@
       ],
       "flavor-text": "You won't pick me out in a crowd, not until my pistol is in your face."
     },
-    "Soren Glasskin": {
+    {
+      "name": "Soren Glasskin",
+      "illustration": "Soren-Glasskin",
       "century": 1800,
       "sex": "m",
       "price": "3x",
@@ -473,7 +541,9 @@
       ],
       "flavor-text": "You keep calling me Soren, you really shouldn't."
     },
-    "The Gray Baron": {
+    {
+      "name": "The Gray Baron",
+      "illustration": "The-Gray-Baron",
       "century": 1900,
       "sex": "f",
       "price": "1p 2x",
@@ -494,7 +564,9 @@
       ],
       "flavor-text": "Men of power cast dark shadows. The closer a woman gets, the easier for her to hide in them."
     },
-    "Dr. Archangel": {
+    {
+      "name": "Dr. Archangel",
+      "illustration": "Dr-Archangel",
       "century": 1900,
       "sex": "f",
       "price": "2m 1x",
@@ -515,7 +587,9 @@
       ],
       "flavor-text": "They never suspect."
     },
-    "Mr. Archangel": {
+    {
+      "name": "Mr. Archangel",
+      "illustration": "Mr-Archangel",
       "century": 1900,
       "sex": "m",
       "price": "2s",
@@ -534,12 +608,14 @@
           "Text": "EMP Strike: Disable all opponent's drones [in his turnpoint, until next turn]"
         }
       ],
-      "Special": "Can build up to 3 drones. Drones destroyed on any strike or when Mr. Archangel is disabled",
+      "special": "Can build up to 3 drones. Drones destroyed on any strike or when Mr. Archangel is disabled",
       "flavor-text": "If the devil grants you your wish, is he still the devil? Or do you become the devil by paying his price?"
     }
-  },
-  "Hideouts": {
-    "SSV-93 Ural": {
+  ],
+  "Hideouts": [
+    {
+      "name": "SSV-93 Ural",
+      "illustration": "SSV-93-Ural",
       "century": 2300,
       "defenese": 10,
       "active": "Move up/downstream",
@@ -547,7 +623,9 @@
       "passive": "Doubles the activated agenda [on Ural's turnpoint, once per turn]",
       "flavor-text": "Tovarisch Capitan, we're in range of their missiles Keep course, they won't see us in range of their fists!"
     },
-    "Zongshan": {
+    {
+      "name": "Zongshan",
+      "illustration": "Zongshan",
       "century": 2200,
       "defenese": 11,
       "active": "Send operator to any turnpoint",
@@ -555,14 +633,16 @@
       "passive": "Turns activated agenda to any type [on Zongshan's turnpoint, once per turn]",
       "flavor-text": "Too many changes impede progress; we need silence."
     },
-    "Avalon": {
+    {
+      "name": "Avalon",
+      "illustration": "Avalon",
       "century": 2100,
       "defenese": 9,
       "active": "Move up/downstream. All operators and hideouts move along with Avalon",
       "price": "2x",
       "passive": "Can be activated as an agenda providing (1x)",
-      "Special": "Phased-out: Positioned as if located in a third stream between the 2 players. [see FAQ]",
+      "special": "Phased-out: Positioned as if located in a third stream between the 2 players. [see FAQ]",
       "flavor-text": "One day this will be the busiest black market in our solar system; we need only to keep it hidden for a century."
     }
-  }
+  ]
 }

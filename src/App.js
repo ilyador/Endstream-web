@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { db } from './firebase'
 import axios from 'axios'
 import Preload from 'react-preload'
+import 'modern-css-reset'
 import { images, imageArray } from './load-images'
 
 console.log(images)
@@ -42,7 +43,7 @@ function App () {
         autoResolveDelay={3000}
       >
         <div>
-          <img src={images['Mori.webp']} alt="Mori" />
+          <img src={images['big/Mori-the-Piercer']} alt="Mori" />
         </div>
       </Preload>
     </div>

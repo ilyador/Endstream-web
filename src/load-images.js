@@ -1,10 +1,16 @@
-function importAll (r) {
-  let images = {}
-  r.keys().map((item, _) => { images[item.replace('./', '')] = r(item) })
-  return images
+let images = {}
+let imageArray = []
+
+
+function importAll (imported) {
+  imported.keys().forEach(img => {
+    let key = img.substr(0, img.lastIndexOf('.')).replace('./', '')
+    images[key] = imported(img)
+    imageArray.push(img)
+  })
 }
 
-const images = importAll(require.context('./img/illustrations', false, /\.(png|jpe?g|svg|webp)$/))
-const imageArray = Object.keys(images).map((imgUrl, index) => images[imgUrl])
+importAll(require.context('./img/illustrations', true, /\.(png|jpe?g|svg|webp)$/))
+
 
 export { images, imageArray }
