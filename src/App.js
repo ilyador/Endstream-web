@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import { db } from './firebase'
 import axios from 'axios'
+import { createUseStyles, useTheme } from 'react-jss'
 import Preload from 'react-preload'
-import { illustrations, imageArray } from './load-images'
+import { imageArray } from './load-images'
 import Board from './Board'
+import Deck from './Deck'
 
 
 const ENV_URL = (process.env.NODE_ENV !== 'production') ?
@@ -16,8 +18,19 @@ const functionURLs = {
 }
 
 
+const useStyles = createUseStyles(theme => ({
+  app: {
+    backgroundColor: theme.colorPrimary,
+    color: theme.textColor,
+    height: '100%'
+  }
+}))
+
+
 function App () {
   const loadingIndicator = (<div>Loading...</div>)
+  const theme = useTheme()
+  const c = useStyles({ theme })
 
   useEffect(() => {
     db.collection('users').get().then((querySnapshot) => {
@@ -39,8 +52,11 @@ function App () {
       images={imageArray}
       autoResolveDelay={3000}
     >
-      {/*<button onClick={callFunction}>FUNCTION</button>*/}
-      <Board/>
+      <div className={c.app}>
+        <button onClick={callFunction}>FUNCTION</button>
+        <Board/>
+        <Deck/>
+      </div>
     </Preload>
   )
 }
