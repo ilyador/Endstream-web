@@ -25,4 +25,9 @@ yarn-error.log*
 
 #firebase
 firebase-config.js
+firebase-debug.log
 endstream-2824f-875fdaabc779.json
+
+#editors
+.idea
+.vscode

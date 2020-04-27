@@ -16,6 +16,7 @@
     "react": "^16.13.1",
     "react-beautiful-dnd": "^13.0.0",
     "react-dom": "^16.13.1",
+    "react-jss": "^10.1.1",
     "react-preload": "^0.6.0",
     "react-scripts": "3.4.1"
   },
