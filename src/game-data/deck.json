@@ -2,11 +2,11 @@
   "Operators": [
     {
       "name": "Mori the Piercer",
-      "illustration": "Mori-the-Piercer",
+      "id": "Mori-the-Piercer",
       "century": 1800,
       "sex": "m",
       "price": "2m 1x",
-      "defenese": 1,
+      "defense": 1,
       "abilities": [
         {
           "price": "1x",
@@ -26,11 +26,11 @@
     },
     {
       "name": "Ben Storm",
-      "illustration": "Ben-Storm",
+      "id": "Ben-Storm",
       "century": 2000,
       "sex": "m",
       "price": "2ms",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1ms",
@@ -49,11 +49,11 @@
     },
     {
       "name": "Angela Storm",
-      "illustration": "Angela-Storm",
+      "id": "Angela-Storm",
       "century": 2000,
       "sex": "f",
       "price": "3mp",
-      "defenese": 3,
+      "defense": 3,
       "abilities": [
         {
           "price": "1mp",
@@ -72,11 +72,11 @@
     },
     {
       "name": "Akane",
-      "illustration": "Akane",
+      "id": "Akane",
       "century": 2100,
       "sex": "f",
       "price": "2p",
-      "defenese": 3,
+      "defense": 3,
       "abilities": [
         {
           "price": "1p",
@@ -96,12 +96,12 @@
     },
     {
       "name": "Jerusalem",
-      "illustration": "Jerusalem",
+      "id": "Jerusalem",
       "type": "AI",
       "century": 2200,
       "sex": "x",
       "price": "3ms",
-      "defenese": 5,
+      "defense": 5,
       "abilities": [
         {
           "price": "1ms",
@@ -120,13 +120,13 @@
     },
     {
       "name": "Samarkand",
-      "illustration": "Samarkand",
+      "id": "Samarkand",
       "type": "AI",
       "sub-type": "Conglomerate",
       "century": 2200,
       "sex": "x",
       "price": "5x",
-      "defenese": "5*",
+      "defense": "5*",
       "abilities": [
         {
           "price": "2x",
@@ -146,13 +146,13 @@
     },
     {
       "name": "Tamerlan",
-      "illustration": "Tamerlan",
+      "id": "Tamerlan",
       "type": "Drone",
       "sub-type": "part of Samarkand",
       "century": null,
       "sex": "x",
       "price": "1s",
-      "defenese": 1,
+      "defense": 1,
       "abilities": [
         {
           "price": "1m",
@@ -172,13 +172,13 @@
     },
     {
       "name": "The Pale Man",
-      "illustration": "The-Pale-Man",
+      "id": "The-Pale-Man",
       "type": "AI",
       "sub-type": "Orbital Strike Team",
       "century": 2200,
       "sex": "x",
       "price": "3ms",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1ms",
@@ -197,13 +197,13 @@
     },
     {
       "name": "Mia Star",
-      "illustration": "Mia-Star",
+      "id": "Mia-Star",
       "type": "Commander",
       "sub-type": "Orbital Strike Team",
       "century": 2300,
       "sex": "f",
       "price": "4mp",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1mp",
@@ -222,12 +222,12 @@
     },
     {
       "name": "Augur, Stream Phase Shaman",
-      "illustration": "Augur",
+      "id": "Augur",
       "sub-type": "Orbital Strike Team",
       "century": 2300,
       "sex": "m",
       "price": "2p 1x",
-      "defenese": 1,
+      "defense": 1,
       "abilities": [
         {
           "price": "1x",
@@ -247,12 +247,12 @@
     },
     {
       "name": "Kim-Li",
-      "illustration": "Kim-Li",
+      "id": "Kim-Li",
       "sub-type": "Orbital Strike Team",
       "century": 2300,
       "sex": "m",
       "price": "2m 2mp",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "2mp",
@@ -272,13 +272,13 @@
     },
     {
       "name": "Reclaimer",
-      "illustration": "Reclaimer",
+      "id": "Reclaimer",
       "type": "Drone",
       "sub-type": "Orbital Strike Team",
       "century": "2300*",
       "sex": "x",
       "price": "1m 1x",
-      "defenese": 4,
+      "defense": 4,
       "abilities": [
         {
           "price": "1m 1x",
@@ -298,13 +298,13 @@
     },
     {
       "name": "Disruptor",
-      "illustration": "Disruptor",
+      "id": "Disruptor",
       "type": "Drone",
       "sub-type": "Orbital Strike Team",
       "century": 2100,
       "sex": "x",
       "price": "2x",
-      "defenese": 1,
+      "defense": 1,
       "abilities": [
         {
           "price": "2x",
@@ -323,11 +323,11 @@
     },
     {
       "name": "Sourayah the Bad Prophet",
-      "illustration": "Sourayah",
+      "id": "Sourayah",
       "century": 1800,
       "sex": "f",
       "price": "1p 2x",
-      "defenese": 3,
+      "defense": 3,
       "abilities": [
         {
           "price": "1p 1x",
@@ -347,13 +347,13 @@
     },
     {
       "name": "Aran",
-      "illustration": "Aran",
+      "id": "Aran",
       "type": "stealth-fighter",
       "sub-type": "Unit 404",
       "century": 1900,
       "sex": "m",
       "price": "1m 1x",
-      "defenese": 1,
+      "defense": 1,
       "abilities": [
         {
           "price": "2m",
@@ -372,13 +372,13 @@
     },
     {
       "name": "Sahar",
-      "illustration": "Sahar",
+      "id": "Sahar",
       "type": "medic",
       "sub-type": "Unit 404",
       "century": 2000,
       "sex": "f",
       "price": "1m 1sp",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1x",
@@ -398,13 +398,13 @@
     },
     {
       "name": "Hamdi",
-      "illustration": "Hamdi",
+      "id": "Hamdi",
       "type": "support",
       "sub-type": "Unit 404",
       "century": 2000,
       "sex": "m",
       "price": "2m 1x",
-      "defenese": 4,
+      "defense": 4,
       "abilities": [
         {
           "price": "1x",
@@ -423,13 +423,13 @@
     },
     {
       "name": "Marwa",
-      "illustration": "Marwa",
+      "id": "Marwa",
       "type": "commander",
       "sub-type": "Unit 404",
       "century": 2100,
       "sex": "f",
       "price": "3ms",
-      "defenese": 3,
+      "defense": 3,
       "abilities": [
         {
           "price": "1ms",
@@ -449,11 +449,11 @@
     },
     {
       "name": "Dr. Koh",
-      "illustration": "Dr-Koh",
+      "id": "Dr-Koh",
       "century": 2200,
       "sex": "f/m",
       "price": "2s 2x",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1x",
@@ -472,12 +472,12 @@
     },
     {
       "name": "Ben Storm",
-      "illustration": "Ben-Storm-AI",
+      "id": "Ben-Storm-AI",
       "type": "AI",
       "century": 2100,
       "sex": "x",
       "price": "2s 1x",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1x",
@@ -497,11 +497,11 @@
     },
     {
       "name": "Captain Shortspear",
-      "illustration": "Captain-Shortspearr",
+      "id": "Captain-Shortspear",
       "century": 1800,
       "sex": "m",
       "price": "3ms",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "2ms",
@@ -520,11 +520,11 @@
     },
     {
       "name": "Soren Glasskin",
-      "illustration": "Soren-Glasskin",
+      "id": "Soren-Glasskin",
       "century": 1800,
       "sex": "m",
       "price": "3x",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1x",
@@ -543,11 +543,11 @@
     },
     {
       "name": "The Gray Baron",
-      "illustration": "The-Gray-Baron",
+      "id": "The-Gray-Baron",
       "century": 1900,
       "sex": "f",
       "price": "1p 2x",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1p 1x",
@@ -566,11 +566,11 @@
     },
     {
       "name": "Dr. Archangel",
-      "illustration": "Dr-Archangel",
+      "id": "Dr-Archangel",
       "century": 1900,
       "sex": "f",
       "price": "2m 1x",
-      "defenese": 2,
+      "defense": 2,
       "abilities": [
         {
           "price": "1m",
@@ -589,11 +589,11 @@
     },
     {
       "name": "Mr. Archangel",
-      "illustration": "Mr-Archangel",
+      "id": "Mr-Archangel",
       "century": 1900,
       "sex": "m",
       "price": "2s",
-      "defenese": 1,
+      "defense": 1,
       "abilities": [
         {
           "price": "1s",
@@ -615,9 +615,9 @@
   "Hideouts": [
     {
       "name": "SSV-93 Ural",
-      "illustration": "SSV-93-Ural",
+      "id": "SSV-93-Ural",
       "century": 2300,
-      "defenese": 10,
+      "defense": 10,
       "active": "Move up/downstream",
       "price": "1x",
       "passive": "Doubles the activated agenda [on Ural's turnpoint, once per turn]",
@@ -625,9 +625,9 @@
     },
     {
       "name": "Zongshan",
-      "illustration": "Zongshan",
+      "id": "Zongshan",
       "century": 2200,
-      "defenese": 11,
+      "defense": 11,
       "active": "Send operator to any turnpoint",
       "price": "2x",
       "passive": "Turns activated agenda to any type [on Zongshan's turnpoint, once per turn]",
@@ -635,9 +635,9 @@
     },
     {
       "name": "Avalon",
-      "illustration": "Avalon",
+      "id": "Avalon",
       "century": 2100,
-      "defenese": 9,
+      "defense": 9,
       "active": "Move up/downstream. All operators and hideouts move along with Avalon",
       "price": "2x",
       "passive": "Can be activated as an agenda providing (1x)",

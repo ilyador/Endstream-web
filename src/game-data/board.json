@@ -10,6 +10,23 @@
   "streams": [
     "opponent",
     "outerworld",
-    "mine"
+    "me"
+  ],
+  "turnpoints": [
+    "ms",
+    "ms",
+    "ms",
+    "ms",
+    "ms",
+    "ps",
+    "ps",
+    "ps",
+    "ps",
+    "ps",
+    "sm",
+    "sm",
+    "sm",
+    "sm",
+    "sm"
   ]
 }
