@@ -5,25 +5,27 @@ export default {
       1800: {
         agenda: 'ms',
         operators: [
-          [
-            'player1',
-            'Mori-the-Piercer'
-          ], [
-            'player1',
-            'Ben-Storm'
-          ]
+          {
+            player: 'player1',
+            id: 'Mori-the-Piercer'
+          },
+          {
+            player: 'player1',
+            id: 'Ben-Storm'
+          }
         ]
       },
       1900: {
         agenda: 'mp',
         operators: [
-          [
-            'player1',
-            'Disruptor'
-          ], [
-            'player2',
-            'Dr-Koh'
-          ]
+          {
+            player: 'player1',
+            id: 'Disruptor'
+          },
+          {
+            player: 'player2',
+            id: 'Dr-Koh'
+          }
         ]
       },
       2000: {
@@ -32,10 +34,10 @@ export default {
       2100: {
         agenda: 'ps',
         hideouts: [
-          [
-            'player1',
-            'SSV-93-Ural'
-          ]
+          {
+            player: 'player1',
+            id: 'SSV-93-Ural'
+          }
         ]
       },
       2200: {
@@ -44,10 +46,10 @@ export default {
       2300: {
         agenda: 'sp',
         operators: [
-          [
-            'player2',
-            'Captain-Shortspear'
-          ]
+          {
+            player: 'player2',
+            id: 'Captain-Shortspear'
+          }
         ]
       }
     },
@@ -55,10 +57,10 @@ export default {
       1800: {
         agenda: 'pm',
         operators: [
-          [
-            'player2',
-            'The-Gray-Baron'
-          ]
+          {
+            player: 'player2',
+            id: 'The-Gray-Baron'
+          }
         ]
       },
       1900: {
@@ -71,16 +73,18 @@ export default {
       2100: {
         agenda: 'ps',
         operators: [
-          [
-            'player2',
-            'Mr-Archangel'
-          ], [
-            'player2',
-            'Dr-Archangel'
-          ], [
-            'player1',
-            'Soren-Glasskin'
-          ]
+          {
+            player: 'player2',
+            id: 'Mr-Archangel'
+          },
+          {
+            player: 'player2',
+            id: 'Dr-Archangel'
+          },
+          {
+            player: 'player1',
+            id: 'Soren-Glasskin'
+          }
         ]
       },
       2200: {
@@ -93,16 +97,16 @@ export default {
     outerworld: {
       2100: {
         hideouts: [
-          [
-            'player2',
-            'Avalon'
-          ]
+          {
+            player: 'player2',
+            id: 'Avalon'
+          }
         ],
         operators: [
-          [
-            'player2',
-            'Sourayah'
-          ]
+          {
+            player: 'player2',
+            id: 'Sourayah'
+          }
         ]
       }
     }

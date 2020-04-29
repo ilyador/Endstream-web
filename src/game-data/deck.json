@@ -1,5 +1,5 @@
 {
-  "Operators": [
+  "operators": [
     {
       "name": "Mori the Piercer",
       "id": "Mori-the-Piercer",
@@ -612,7 +612,7 @@
       "flavor-text": "If the devil grants you your wish, is he still the devil? Or do you become the devil by paying his price?"
     }
   ],
-  "Hideouts": [
+  "hideouts": [
     {
       "name": "SSV-93 Ural",
       "id": "SSV-93-Ural",

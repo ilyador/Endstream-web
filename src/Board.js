@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 import board from './game-data/board.json'
+import deck from './game-data/deck.json'
 import game from './game-data/new-game.js'
 import { illustrations } from './load-images'
 
@@ -10,7 +11,9 @@ const IDs = {
   opponent: 'player2',
   outerworld: 'outerworld'
 }
-const { epochs, streams: _streams } = board
+
+const { operators, hideouts } = deck
+const { epochs: _epochs, streams: _streams } = board
 const { streams } = game
 
 
@@ -30,7 +33,8 @@ const useStyles = createUseStyles((theme) => ({
   },
   epoch: {
     flex: 1,
-    border: '1px solid gray'
+    border: '1px solid gray',
+    fontSize: 10
   }
 }))
 
@@ -48,19 +52,33 @@ export default function Board () {
 
         return (
           <div className={c[stream]} key={stream}>
-            {epochs.map(epoch => {
+            {_epochs.map(epoch => {
               let _epoch = playerStream[epoch]
-              let operators = _epoch && _epoch.operators
-              let hideouts = _epoch && _epoch.hideouts
+              let _operators = _epoch && _epoch.operators
+              let _hideouts = _epoch && _epoch.hideouts
 
               return (
                 <div className={c.epoch} key={epoch}>
-                  {operators && operators.map(operator =>
-                    <div key={operator}>{operator[1]}</div>
-                  )}
-                  {hideouts && hideouts.map(hideouts =>
-                    <div key={hideouts}>{hideouts[1]}</div>
-                  )}
+                  {_operators && _operators.map(_operator => {
+                    const operator = operators.find(({ id }) => id === _operator.id )
+
+                    return (
+                      <div key={_operator.id}>
+                        {operator.name}
+                        <img src={illustrations[`small/${_operator.id}`]} alt={_operator.id}/>
+                      </div>
+                    )
+                  })}
+                  {_hideouts && _hideouts.map(_hideout => {
+                    const hideout = hideouts.find(({ id }) => id === _hideout.id )
+
+                    return (
+                      <div key={_hideout.id}>
+                        {hideout.name}
+                        <img src={illustrations[`small/${_hideout.id}`]} alt={_hideout.id}/>
+                      </div>
+                    )
+                  })}
                 </div>
               )
             })}
@@ -70,5 +88,3 @@ export default function Board () {
     </div>
   )
 }
-
-// <img src={illustrations[`big/${id}`]} alt={id}} />
