@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { db } from './firebase'
+import { db } from '../helpers/firebase'
 import axios from 'axios'
 import { createUseStyles, useTheme } from 'react-jss'
 import Preload from 'react-preload'
-import { imageArray } from './load-images'
+import { imageArray } from '../helpers/load-images'
 import Board from './Board'
 import Deck from './Deck'
 

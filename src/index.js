@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from 'react-jss'
-import App from './App'
+import App from './components/App'
 import 'modern-css-reset'
-import * as serviceWorker from './serviceWorker'
+import * as serviceWorker from './helpers/serviceWorker'
 
 
 const theme = {

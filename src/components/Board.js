@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
-import board from './game-data/board.json'
-import deck from './game-data/deck.json'
-import game from './game-data/new-game.js'
-import { illustrations } from './load-images'
+import board from '../game-data/board.json'
+import deck from '../game-data/deck.json'
+import game from '../game-data/new-game.js'
+import { illustrations } from '../helpers/load-images'
 
 
 const IDs = {
@@ -41,6 +41,7 @@ const useStyles = createUseStyles((theme) => ({
 
 export default function Board () {
 
+  const [board, setBoard] = useState(streams)
   const theme = useTheme()
   const c = useStyles({ theme })
 
@@ -48,7 +49,7 @@ export default function Board () {
   return (
     <div className={c.board}>
       {_streams.map(stream => {
-        let playerStream = streams[IDs[stream]]
+        let playerStream = board[IDs[stream]]
 
         return (
           <div className={c[stream]} key={stream}>
