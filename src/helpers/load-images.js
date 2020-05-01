@@ -10,7 +10,7 @@ function importAll (imported) {
   })
 }
 
-importAll(require.context('./img/illustrations', true, /\.(png|jpe?g|svg|webp)$/))
+importAll(require.context('../img/illustrations', true, /\.(png|jpe?g|svg|webp)$/))
 
 
 export { illustrations, imageArray }

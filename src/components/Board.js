@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { createUseStyles, useTheme } from 'react-jss'
 import board from '../game-data/board.json'
-import deck from '../game-data/deck.json'
-import game from '../game-data/new-game.js'
-import { illustrations } from '../helpers/load-images'
+import game from '../game-data/new-game'
+import Epoch from './Epoch'
 
 
 const IDs = {
@@ -12,15 +11,30 @@ const IDs = {
   outerworld: 'outerworld'
 }
 
-const { operators, hideouts } = deck
 const { epochs: _epochs, streams: _streams } = board
 const { streams } = game
 
 
-const useStyles = createUseStyles((theme) => ({
-  board: {},
+function getScale (element) {
+  let width = element.offsetWidth
+  let height = element.offsetHeight
+  let windowWidth = document.body.clientWidth
+  let windowHeight = document.body.clientHeight
+  return Math.min(windowWidth / width, windowHeight / height)
+}
+
+
+const useStyles = createUseStyles({
+  board: {
+    height: '100%',
+    margin: [0, 'auto'],
+    position: 'absolute',
+    transformOrigin: 'top left',
+    transition: 'all .2s ease-in-out',
+    transform: ({ zoom }) => `scale(${zoom})`
+  },
   stream: {
-    display: 'flex'
+    whiteSpace: 'nowrap'
   },
   me: {
     extend: 'stream'
@@ -29,63 +43,35 @@ const useStyles = createUseStyles((theme) => ({
     extend: 'stream'
   },
   outerworld: {
-    extend: 'stream',
-  },
-  epoch: {
-    flex: 1,
-    border: '1px solid gray',
-    fontSize: 10
+    extend: 'stream'
   }
-}))
+})
+
 
 
 export default function Board () {
 
+  const boardElement = useRef(null)
+  const [zoom, setZoom] = useState(1)
   const [board, setBoard] = useState(streams)
-  const theme = useTheme()
-  const c = useStyles({ theme })
+  const c = useStyles({ zoom })
+
+
+  const handleZoomChange = () => {
+    if (zoom === 1) setZoom(getScale(boardElement.current))
+    else setZoom(1)
+  }
 
 
   return (
-    <div className={c.board}>
-      {_streams.map(stream => {
-        let playerStream = board[IDs[stream]]
+    <div className={c.board} ref={boardElement}>
+      <button onClick={handleZoomChange}>ZOOM</button>
 
-        return (
-          <div className={c[stream]} key={stream}>
-            {_epochs.map(epoch => {
-              let _epoch = playerStream[epoch]
-              let _operators = _epoch && _epoch.operators
-              let _hideouts = _epoch && _epoch.hideouts
-
-              return (
-                <div className={c.epoch} key={epoch}>
-                  {_operators && _operators.map(_operator => {
-                    const operator = operators.find(({ id }) => id === _operator.id )
-
-                    return (
-                      <div key={_operator.id}>
-                        {operator.name}
-                        <img src={illustrations[`small/${_operator.id}`]} alt={_operator.id}/>
-                      </div>
-                    )
-                  })}
-                  {_hideouts && _hideouts.map(_hideout => {
-                    const hideout = hideouts.find(({ id }) => id === _hideout.id )
-
-                    return (
-                      <div key={_hideout.id}>
-                        {hideout.name}
-                        <img src={illustrations[`small/${_hideout.id}`]} alt={_hideout.id}/>
-                      </div>
-                    )
-                  })}
-                </div>
-              )
-            })}
-          </div>
-        )
-      })}
+      {_streams.map(stream => (
+        <div className={c[stream]} key={stream}>
+          {_epochs.map(epoch => <Epoch epoch={board[IDs[stream]][epoch]} key={epoch}/>)}
+        </div>
+      ))}
     </div>
   )
 }
