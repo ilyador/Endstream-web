@@ -23,8 +23,18 @@ export default {
             id: 'Disruptor'
           },
           {
+            player: 'player1',
+            id: 'Samarkand'
+          },
+          {
             player: 'player2',
             id: 'Dr-Koh'
+          }
+        ],
+        hideouts: [
+          {
+            player: 'player1',
+            id: 'SSV-93-Ural'
           }
         ]
       },
@@ -32,13 +42,7 @@ export default {
         agenda: 'pm'
       },
       2100: {
-        agenda: 'ps',
-        hideouts: [
-          {
-            player: 'player1',
-            id: 'SSV-93-Ural'
-          }
-        ]
+        agenda: 'ps'
       },
       2200: {
         agenda: 'sm'

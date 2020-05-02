@@ -1,37 +1,103 @@
 import React from 'react'
-import { createUseStyles, useTheme } from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import deck from '../game-data/deck.json'
 import Card from './Cards/Small'
+import { groupBy as _groupBy } from 'lodash-es'
 
 
-const { operators, hideouts } = deck
+const IDs = {
+  me: 'player1',
+  opponent: 'player2',
+  outerworld: 'outerworld'
+}
+
+
+const mobileSize = 640
+const tabletSize = 1000
 
 
 const useStyles = createUseStyles({
   epoch: {
-    display: 'inline-block',
-    width: 130,
+    width: '50vw',
     border: '1px solid black'
+  },
+  [`@media (min-width: ${mobileSize}px)`]: {
+    epoch: {
+      width: '33.3333vw'
+    }
+  },
+  [`@media (min-width: ${tabletSize}px)`]: {
+    epoch: {
+      flex: 1,
+      width: 'auto'
+    }
+  },
+  cards: {
+    margin: 10
+  },
+  operators: {
+    extend: 'cards'
+  },
+  hideouts: {
+    extend: 'cards'
   }
 })
 
 
-export default function Epoch ({ epoch: _epoch }) {
-  const theme = useTheme()
-  const c = useStyles({ theme })
+export default function Epoch ({ epoch, owner }) {
+  const c = useStyles()
 
-  let _operators = _epoch && _epoch.operators
-  let _hideouts = _epoch && _epoch.hideouts
+  let _operators = epoch && _groupBy(epoch.operators, op => op.player === IDs.me)
+  let _hideouts = epoch && _groupBy(epoch.hideouts, op => op.player === IDs.me)
+
+
+  let positions = [
+    {
+      owner: IDs.opponent,
+      type: 'hideouts',
+      cards: _hideouts && _hideouts['false']
+    },
+    {
+      owner: IDs.opponent,
+      type: 'operators',
+      cards: _operators && _operators['false']
+    },
+    {
+      owner: IDs.me,
+      type: 'operators',
+      cards: _operators && _operators['true']
+    },
+    {
+      owner: IDs.me,
+      type: 'hideouts',
+      cards: _hideouts && _hideouts['true']
+    }
+  ]
+
 
   return (
     <div className={c.epoch}>
-      {_operators && _operators.map(_operator => {
-        const operator = operators.find(({ id }) => id === _operator.id)
-        return <Card key={operator.id} data={operator} type='operator'/>
-      })}
-      {_hideouts && _hideouts.map(_hideout => {
-        const hideout = hideouts.find(({ id }) => id === _hideout.id)
-        return <Card key={hideout.id} data={hideout} type='hideout'/>
+
+      {positions.map((position, index) => {
+        const { owner, type, cards } = position
+
+        return (
+          <div className={c[type]} key={index}>
+            {cards && cards.map(card => {
+
+              let _card = deck[type].find(({ id }) => id === card.id)
+              _card.mine = card.player === IDs.me
+
+              return (
+                <Card
+                  key={card.id}
+                  data={_card}
+                  type={type}
+                />
+              )
+            })}
+          </div>
+        )
       })}
     </div>
   )

@@ -22,7 +22,7 @@ const useStyles = createUseStyles(theme => ({
   app: {
     backgroundColor: theme.colorPrimary,
     color: theme.textColor,
-    height: '100%',
+    height: '100%'
   }
 }))
 
@@ -46,17 +46,12 @@ function App () {
       .catch(console.log)
   }
 
+
   return (
-    <Preload
-      loadingIndicator={loadingIndicator}
-      images={imageArray}
-      autoResolveDelay={3000}
-    >
-      <div className={c.app}>
-        <Board/>
-        <Deck/>
-      </div>
-    </Preload>
+    <div className={c.app}>
+      <Board/>
+      <Deck/>
+    </div>
   )
 }
 

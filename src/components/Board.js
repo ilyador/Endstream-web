@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { createUseStyles, useTheme } from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import board from '../game-data/board.json'
 import game from '../game-data/new-game'
 import Epoch from './Epoch'
@@ -10,6 +10,7 @@ const IDs = {
   opponent: 'player2',
   outerworld: 'outerworld'
 }
+
 
 const { epochs: _epochs, streams: _streams } = board
 const { streams } = game
@@ -31,10 +32,10 @@ const useStyles = createUseStyles({
     position: 'absolute',
     transformOrigin: 'top left',
     transition: 'all .2s ease-in-out',
-    transform: ({ zoom }) => `scale(${zoom})`
+    transform: zoom => `scale(${zoom})`
   },
   stream: {
-    whiteSpace: 'nowrap'
+    display: 'flex'
   },
   me: {
     extend: 'stream'
@@ -54,7 +55,7 @@ export default function Board () {
   const boardElement = useRef(null)
   const [zoom, setZoom] = useState(1)
   const [board, setBoard] = useState(streams)
-  const c = useStyles({ zoom })
+  const c = useStyles(zoom)
 
 
   const handleZoomChange = () => {
@@ -69,7 +70,13 @@ export default function Board () {
 
       {_streams.map(stream => (
         <div className={c[stream]} key={stream}>
-          {_epochs.map(epoch => <Epoch epoch={board[IDs[stream]][epoch]} key={epoch}/>)}
+          {_epochs.map(epoch =>
+            <Epoch
+              owner={stream}
+              epoch={board[IDs[stream]][epoch]}
+              key={epoch}
+            />
+          )}
         </div>
       ))}
     </div>
