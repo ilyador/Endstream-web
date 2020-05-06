@@ -32,14 +32,16 @@ const useStyles = createUseStyles({
       width: 'auto'
     }
   },
-  cards: {
-    margin: 10
+  type: {
+    display: 'flex',
+    justifyContent: 'center',
+    margin: [8, 0],
   },
   operators: {
-    extend: 'cards'
+    extend: 'type'
   },
   hideouts: {
-    extend: 'cards'
+    extend: 'type'
   }
 })
 

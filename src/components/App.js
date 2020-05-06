@@ -28,7 +28,6 @@ const useStyles = createUseStyles(theme => ({
 
 
 function App () {
-  const loadingIndicator = (<div>Loading...</div>)
   const theme = useTheme()
   const c = useStyles({ theme })
 

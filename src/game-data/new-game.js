@@ -27,8 +27,16 @@ export default {
             id: 'Samarkand'
           },
           {
-            player: 'player2',
+            player: 'player1',
             id: 'Dr-Koh'
+          },
+          {
+            player: 'player2',
+            id: 'Sahar'
+          },
+          {
+            player: 'player2',
+            id: 'Hamdi'
           }
         ],
         hideouts: [

@@ -7,8 +7,9 @@ const useStyles = createUseStyles({
   card: {
     border: mine => (mine) ? '1px solid white' : '1px solid grey',
     borderRadius: 6,
+    flex: '0 1 35%',
     overflow: 'hidden',
-    margin: 10
+    margin: [0, 4]
   },
   name: {
     fontSize: 10,

@@ -27,7 +27,6 @@ function getScale (element) {
 
 const useStyles = createUseStyles({
   board: {
-    height: '100%',
     margin: [0, 'auto'],
     position: 'absolute',
     transformOrigin: 'top left',
