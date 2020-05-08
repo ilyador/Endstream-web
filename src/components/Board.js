@@ -71,7 +71,7 @@ export default function Board () {
         <div className={c[stream]} key={stream}>
           {_epochs.map(epoch =>
             <Epoch
-              owner={stream}
+              owner={IDs[stream]}
               epoch={board[IDs[stream]][epoch]}
               key={epoch}
             />

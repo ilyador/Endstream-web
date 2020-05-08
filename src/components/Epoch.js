@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 import deck from '../game-data/deck.json'
 import Card from './Cards/Small'
 import { groupBy as _groupBy } from 'lodash-es'
-
+import Agenda from './Agenda'
 
 const IDs = {
   me: 'player1',
@@ -19,7 +19,9 @@ const tabletSize = 1000
 const useStyles = createUseStyles({
   epoch: {
     width: '50vw',
-    border: '1px solid black'
+    border: '1px solid black',
+    display: 'flex',
+    flexDirection: 'column'
   },
   [`@media (min-width: ${mobileSize}px)`]: {
     epoch: {
@@ -50,7 +52,7 @@ export default function Epoch ({ epoch, owner }) {
   const c = useStyles()
 
   let _operators = epoch && _groupBy(epoch.operators, op => op.player === IDs.me)
-  let _hideouts = epoch && _groupBy(epoch.hideouts, op => op.player === IDs.me)
+  let _hideouts = epoch && _groupBy(epoch.hideouts, ho => ho.player === IDs.me)
 
 
   let positions = [
@@ -79,6 +81,7 @@ export default function Epoch ({ epoch, owner }) {
 
   return (
     <div className={c.epoch}>
+      {(owner === IDs.opponent) && <Agenda agenda={epoch.agenda} mine={false} />}
 
       {positions.map((position, index) => {
         const { owner, type, cards } = position
@@ -101,6 +104,8 @@ export default function Epoch ({ epoch, owner }) {
           </div>
         )
       })}
+
+      {(owner === IDs.me) && <Agenda agenda={epoch.agenda} mine={true} />}
     </div>
   )
 }
