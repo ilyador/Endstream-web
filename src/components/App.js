@@ -20,7 +20,6 @@ const functionURLs = {
 
 const useStyles = createUseStyles(theme => ({
   app: {
-    backgroundColor: theme.colorPrimary,
     color: theme.textColor,
     height: '100%'
   }

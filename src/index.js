@@ -8,6 +8,7 @@ import * as serviceWorker from './helpers/serviceWorker'
 
 const theme = {
   colorPrimary: '#12141a',
+  colorBackground: '#1d2026',
   textColor: '#fff'
 }
 

@@ -25,8 +25,9 @@ function getScale (element) {
 }
 
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles(theme => ({
   board: {
+    backgroundColor: theme.colorBackground,
     margin: [0, 'auto'],
     position: 'absolute',
     transformOrigin: 'top left',
@@ -44,8 +45,12 @@ const useStyles = createUseStyles({
   },
   outerworld: {
     extend: 'stream'
+  },
+  zoomButton: {
+    position: 'absolute',
+    zIndex: 5
   }
-})
+}))
 
 
 
@@ -65,7 +70,7 @@ export default function Board () {
 
   return (
     <div className={c.board} ref={boardElement}>
-      <button onClick={handleZoomChange}>ZOOM</button>
+      <button className={c.zoomButton} onClick={handleZoomChange}>ZOOM</button>
 
       {_streams.map(stream => (
         <div className={c[stream]} key={stream}>

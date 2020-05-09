@@ -3,9 +3,10 @@ import { createUseStyles } from 'react-jss'
 import { illustrations } from '../../helpers/load-images'
 
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles(theme => ({
   card: {
     border: mine => (mine) ? '1px solid white' : '1px solid grey',
+    backgroundColor: theme.colorPrimary,
     borderRadius: 6,
     flex: '0 1 35%',
     overflow: 'hidden',
@@ -18,7 +19,7 @@ const useStyles = createUseStyles({
   img: {
 
   }
-})
+}))
 
 
 export default function Card ({ type: cardType, data }) {

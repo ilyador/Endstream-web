@@ -12,7 +12,7 @@ const IDs = {
 }
 
 
-const mobileSize = 640
+const mobileSize = 600
 const tabletSize = 1000
 
 
