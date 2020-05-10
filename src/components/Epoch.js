@@ -1,5 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { Droppable } from "react-beautiful-dnd"
 import deck from '../game-data/deck.json'
 import Card from './Cards/Small'
 import { groupBy as _groupBy } from 'lodash-es'
@@ -16,10 +17,10 @@ const mobileSize = 600
 const tabletSize = 1000
 
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles(theme => ({
   epoch: {
     width: '50vw',
-    border: '1px solid black',
+    border: `1px solid ${theme.colorPrimary}`,
     display: 'flex',
     flexDirection: 'column'
   },
@@ -36,6 +37,7 @@ const useStyles = createUseStyles({
   },
   type: {
     display: 'flex',
+    flex: '1 0',
     justifyContent: 'center',
     margin: [8, 0],
   },
@@ -45,14 +47,14 @@ const useStyles = createUseStyles({
   hideouts: {
     extend: 'type'
   }
-})
+}))
 
 
-export default function Epoch ({ epoch, owner }) {
+export default function Epoch ({ epoch, turnpoint, owner }) {
   const c = useStyles()
 
-  let _operators = epoch && _groupBy(epoch.operators, op => op.player === IDs.me)
-  let _hideouts = epoch && _groupBy(epoch.hideouts, ho => ho.player === IDs.me)
+  let _operators = turnpoint && _groupBy(turnpoint.operators, op => op.player === IDs.me)
+  let _hideouts = turnpoint && _groupBy(turnpoint.hideouts, ho => ho.player === IDs.me)
 
 
   let positions = [
@@ -79,33 +81,62 @@ export default function Epoch ({ epoch, owner }) {
   ]
 
 
+  const getListStyle = isDraggingOver => ({
+    background: isDraggingOver ? 'lightblue' : 'none',
+  })
+
+
   return (
     <div className={c.epoch}>
-      {(owner === IDs.opponent) && <Agenda agenda={epoch.agenda} mine={false} />}
+      {(owner === IDs.opponent) && <Agenda agenda={turnpoint.agenda} mine={false} />}
 
       {positions.map((position, index) => {
-        const { owner, type, cards } = position
+        const { owner: _owner, type, cards } = position
+
+        if ( // Remove the option to drag hideout into opponent's stream
+          type === 'hideouts' && (
+            (_owner !== owner && owner === IDs.me) ||
+            (_owner !== owner && owner === IDs.opponent)
+          )
+        ) return null;
+
 
         return (
-          <div className={c[type]} key={index}>
-            {cards && cards.map(card => {
+          <Droppable
+            direction="horizontal"
+            droppableId={epoch + '-' + type + '-' + owner + '-' + _owner}
+            key={index}
+          >
+            {(provided, snapshot) => (
+              <div
+                ref={provided.innerRef}
+                style={getListStyle(snapshot.isDraggingOver)}
+                className={c[type]}
+              >
+                {cards && cards.map((card, index2) => {
 
-              let _card = deck[type].find(({ id }) => id === card.id)
-              _card.mine = card.player === IDs.me
+                  let _card = deck[type].find(({ id }) => id === card.id)
+                  _card.mine = card.player === IDs.me
 
-              return (
-                <Card
-                  key={card.id}
-                  data={_card}
-                  type={type}
-                />
-              )
-            })}
-          </div>
+                  return (
+                    <Card
+                      key={card.id}
+                      index={index2}
+                      player={card.player}
+                      data={_card}
+                      type={type}
+                    />
+                  )
+                })}
+
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
         )
       })}
 
-      {(owner === IDs.me) && <Agenda agenda={epoch.agenda} mine={true} />}
+      {(owner === IDs.me) && <Agenda agenda={turnpoint.agenda} mine={true} />}
     </div>
   )
 }
