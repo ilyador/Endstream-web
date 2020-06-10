@@ -43,8 +43,8 @@ export default function Agenda ({ agenda: _agenda, mine }) {
 
 
   const spinAgenda = () => {
-    let spinned = Array.from(agenda).reverse()
-    setAgenda(spinned)
+    let spun = Array.from(agenda).reverse()
+    setAgenda(spun)
   }
 
   return (

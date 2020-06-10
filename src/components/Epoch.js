@@ -3,7 +3,6 @@ import { createUseStyles } from 'react-jss'
 import { Droppable } from "react-beautiful-dnd"
 import deck from '../game-data/deck.json'
 import Card from './Cards/Small'
-import { groupBy as _groupBy } from 'lodash-es'
 import Agenda from './Agenda'
 
 const IDs = {
@@ -53,30 +52,26 @@ const useStyles = createUseStyles(theme => ({
 export default function Epoch ({ epoch, turnpoint, owner }) {
   const c = useStyles()
 
-  let _operators = turnpoint && _groupBy(turnpoint.operators, op => op.player === IDs.me)
-  let _hideouts = turnpoint && _groupBy(turnpoint.hideouts, ho => ho.player === IDs.me)
-
-
   let positions = [
     {
       owner: IDs.opponent,
       type: 'hideouts',
-      cards: _hideouts && _hideouts['false']
+      cards: turnpoint?.hideouts?.[IDs.opponent]
     },
     {
       owner: IDs.opponent,
       type: 'operators',
-      cards: _operators && _operators['false']
+      cards: turnpoint?.operators?.[IDs.opponent]
     },
     {
       owner: IDs.me,
       type: 'operators',
-      cards: _operators && _operators['true']
+      cards: turnpoint?.operators?.[IDs.me]
     },
     {
       owner: IDs.me,
       type: 'hideouts',
-      cards: _hideouts && _hideouts['true']
+      cards: turnpoint?.hideouts?.[IDs.me]
     }
   ]
 
@@ -115,14 +110,14 @@ export default function Epoch ({ epoch, turnpoint, owner }) {
               >
                 {cards && cards.map((card, index2) => {
 
-                  let _card = deck[type].find(({ id }) => id === card.id)
+                  let _card = deck[type].find(({ id }) => id === card)
                   _card.mine = card.player === IDs.me
 
                   return (
                     <Card
-                      key={card.id}
+                      key={card}
                       index={index2}
-                      player={card.player}
+                      player={position.owner}
                       data={_card}
                       type={type}
                     />

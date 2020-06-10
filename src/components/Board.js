@@ -71,7 +71,7 @@ export default function Board () {
   const onDragEnd = result => {
     const { source, destination } = result
 
-    if (!destination) return
+    if (!destination || (source.droppableId === destination.droppableId)) return
 
     const sourceDroppable = source.droppableId.split('-')
     const destinationDroppable = destination.droppableId.split('-')
@@ -90,33 +90,9 @@ export default function Board () {
 
     console.log(_source, _destination)
 
-    // if (source.droppableId === destination.droppableId) {
-    //   const items = reorder(
-    //     this.getList(source.droppableId),
-    //     source.index,
-    //     destination.index
-    //   )
-    //
-    //   let state = { items }
-    //
-    //   if (source.droppableId === 'droppable2') {
-    //     state = { selected: items }
-    //   }
-    //
-    //   this.setState(state)
-    // } else {
-    //   const result = move(
-    //     this.getList(source.droppableId),
-    //     this.getList(destination.droppableId),
-    //     source,
-    //     destination
-    //   )
-    //
-    //   this.setState({
-    //     items: result.droppable,
-    //     selected: result.droppable2
-    //   })
-    // }
+    // let modifiedStream = board[_destination.streamOwner][_destination.epoch]
+    // const [removed] = sourceClone.splice(droppableSource.index, 1)
+    // console.log(modifiedStream)
   }
 
 

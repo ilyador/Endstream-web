@@ -4,47 +4,19 @@ export default {
     player1: {
       1800: {
         agenda: 'ms',
-        operators: [
-          {
-            player: 'player1',
-            id: 'Mori-the-Piercer'
-          },
-          {
-            player: 'player1',
-            id: 'Ben-Storm'
-          }
-        ]
+        operators: {
+          player1: ['Mori-the-Piercer', 'Ben-Storm']
+        }
       },
       1900: {
         agenda: 'mp',
-        operators: [
-          {
-            player: 'player1',
-            id: 'Disruptor'
-          },
-          {
-            player: 'player1',
-            id: 'Samarkand'
-          },
-          {
-            player: 'player1',
-            id: 'Dr-Koh'
-          },
-          {
-            player: 'player2',
-            id: 'Sahar'
-          },
-          {
-            player: 'player2',
-            id: 'Hamdi'
-          }
-        ],
-        hideouts: [
-          {
-            player: 'player1',
-            id: 'SSV-93-Ural'
-          }
-        ]
+        operators: {
+          player1: ['Disruptor', 'Samarkand', 'Dr-Koh'],
+          player2: ['Sahar', 'Hamdi']
+        },
+        hideouts: {
+          player1: ['SSV-93-Ural']
+        }
       },
       2000: {
         agenda: 'pm'
@@ -57,47 +29,30 @@ export default {
       },
       2300: {
         agenda: 'sp',
-        operators: [
-          {
-            player: 'player2',
-            id: 'Captain-Shortspear'
-          }
-        ]
+        operators: {
+          player2: ['Captain-Shortspear']
+        }
       }
     },
     player2: {
       1800: {
         agenda: 'pm',
-        operators: [
-          {
-            player: 'player2',
-            id: 'The-Gray-Baron'
-          }
-        ]
+        operators: {
+          player2: ['The-Gray-Baron']
+        }
       },
       1900: {
         agenda: 'sm'
       },
       2000: {
-        agenda: 'ms',
-        operators: []
+        agenda: 'ms'
       },
       2100: {
         agenda: 'ps',
-        operators: [
-          {
-            player: 'player2',
-            id: 'Mr-Archangel'
-          },
-          {
-            player: 'player2',
-            id: 'Dr-Archangel'
-          },
-          {
-            player: 'player1',
-            id: 'Soren-Glasskin'
-          }
-        ]
+        operators: {
+          player2: ['Mr-Archangel', 'Dr-Archangel'],
+          player1: ['Soren-Glasskin']
+        }
       },
       2200: {
         agenda: 'ps'
@@ -108,18 +63,12 @@ export default {
     },
     outerworld: {
       2100: {
-        hideouts: [
-          {
-            player: 'player2',
-            id: 'Avalon'
-          }
-        ],
-        operators: [
-          {
-            player: 'player2',
-            id: 'Sourayah'
-          }
-        ]
+        hideouts: {
+          player2: ['Avalon']
+        },
+        operators: {
+          player2: ['Sourayah']
+        }
       }
     }
   }
