@@ -4,6 +4,7 @@ import board from '../game-data/board.json'
 import game from '../game-data/new-game'
 import Epoch from './Epoch'
 import { DragDropContext } from 'react-beautiful-dnd'
+import { cloneDeep as _cloneDeep, set as _set } from 'lodash-es'
 
 
 const IDs = {
@@ -71,8 +72,6 @@ export default function Board () {
   const onDragEnd = result => {
     const { source, destination } = result
 
-    if (!destination || (source.droppableId === destination.droppableId)) return
-
     const sourceDroppable = source.droppableId.split('-')
     const destinationDroppable = destination.droppableId.split('-')
     const _source = {
@@ -88,11 +87,56 @@ export default function Board () {
       owner: destinationDroppable[3],
     }
 
-    console.log(_source, _destination)
 
-    // let modifiedStream = board[_destination.streamOwner][_destination.epoch]
-    // const [removed] = sourceClone.splice(droppableSource.index, 1)
-    // console.log(modifiedStream)
+    if (
+      !destination ||
+      (source.droppableId === destination.droppableId) ||
+      _source.type !== _destination.type ||
+      _source.owner !== _destination.owner
+    ) return
+
+
+
+    let destinationEpoch = _cloneDeep(board[_destination.streamOwner][_destination.epoch])
+    let sourceEpoch = _cloneDeep(board[_source.streamOwner][_source.epoch])
+
+    const [removed] = sourceEpoch[_source.type][_source.owner].splice(source.index, 1)
+
+    if (destinationEpoch[_destination.type]) {
+      destinationEpoch[_destination.type][_destination.owner].splice(destination.index, 0, removed)
+    } else {
+      _set(destinationEpoch, [_destination.type, _destination.owner, 0], removed)
+    }
+
+
+    setBoard(originalBoard => {
+      let newBoard = {}
+
+      if (_source.streamOwner === _destination.streamOwner) {
+        newBoard = {
+          ...originalBoard,
+          [_destination.streamOwner]: {
+            ...originalBoard[_destination.streamOwner],
+            [_source.epoch]: sourceEpoch,
+            [_destination.epoch]: destinationEpoch,
+          }
+        }
+      } else {
+        newBoard = {
+          ...originalBoard,
+            [_destination.streamOwner]: {
+            ...originalBoard[_destination.streamOwner],
+            [_destination.epoch]: destinationEpoch
+          },
+          [_source.streamOwner]: {
+            ...originalBoard[_source.streamOwner],
+            [_source.epoch]: sourceEpoch,
+          },
+        }
+      }
+
+      return newBoard
+    })
   }
 
 
