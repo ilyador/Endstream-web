@@ -49,7 +49,7 @@ const useStyles = createUseStyles(theme => ({
 }))
 
 
-export default function Epoch ({ epoch, turnpoint, owner }) {
+export default function Epoch ({ epoch, turnpoint, owner, setCard }) {
   const c = useStyles()
 
   let positions = [
@@ -85,7 +85,7 @@ export default function Epoch ({ epoch, turnpoint, owner }) {
     <div className={c.epoch}>
       {(owner === IDs.opponent) && <Agenda agenda={turnpoint.agenda} mine={false} />}
 
-      {positions.map((position, index) => {
+      {positions.map((position, index1) => {
         const { owner: _owner, type, cards } = position
 
         if ( // Remove the option to drag hideout into opponent's stream
@@ -100,7 +100,7 @@ export default function Epoch ({ epoch, turnpoint, owner }) {
           <Droppable
             direction="horizontal"
             droppableId={epoch + '-' + type + '-' + owner + '-' + _owner}
-            key={index}
+            key={index1}
           >
             {(provided, snapshot) => (
               <div
@@ -119,6 +119,7 @@ export default function Epoch ({ epoch, turnpoint, owner }) {
                       index={index2}
                       player={position.owner}
                       data={_card}
+                      setCard={setCard}
                       type={type}
                     />
                   )

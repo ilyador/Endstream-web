@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
-import { UI } from '../helpers/load-images'
+import { UIimages } from '../helpers/load-images'
 
 
 const useStyles = createUseStyles(theme => ({
@@ -30,9 +30,9 @@ const useStyles = createUseStyles(theme => ({
 
 function getImgSrc(agenda) {
   switch (agenda) {
-    case 'm': return UI['agenda-military']
-    case 'p': return UI['agenda-politic']
-    case 's': return UI['agenda-science']
+    case 'm': return UIimages['agenda-military']
+    case 'p': return UIimages['agenda-politic']
+    case 's': return UIimages['agenda-science']
   }
 }
 

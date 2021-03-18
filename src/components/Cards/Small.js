@@ -25,16 +25,22 @@ const useStyles = createUseStyles(theme => ({
 }))
 
 
-export default function Card ({ type: cardType, data, player, index }) {
+export default function Card ({ type: cardType, data, player, setCard, index }) {
   const { id, name, mine } = data
   const c = useStyles(mine)
 
 
   const getItemStyle = (isDragging, draggableStyle) => ({
-    // zoom: isDragging ? 1.3 : 1,
-
     ...draggableStyle
   })
+
+
+  const handleClick = () => {
+    setCard({
+      img: illustrations[`big/${id}`],
+      ...data
+    })
+  }
 
 
   return (
@@ -42,6 +48,7 @@ export default function Card ({ type: cardType, data, player, index }) {
       {(provided, snapshot) => (
         <div
           className={c.card}
+          onClick={handleClick}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}

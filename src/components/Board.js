@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { createUseStyles } from 'react-jss'
+import { DragDropContext } from 'react-beautiful-dnd'
+import { cloneDeep as _cloneDeep, set as _set } from 'lodash-es'
 import board from '../game-data/board.json'
 import game from '../game-data/new-game'
 import Epoch from './Epoch'
-import { DragDropContext } from 'react-beautiful-dnd'
-import { cloneDeep as _cloneDeep, set as _set } from 'lodash-es'
+import Card from './Cards/Big'
 
 
 const IDs = {
@@ -13,10 +14,8 @@ const IDs = {
   outerworld: 'outerworld'
 }
 
-
 const { epochs: _epochs, streams: _streams } = board
 const { streams } = game
-
 
 function getScale (element) {
   let width = element.offsetWidth
@@ -25,7 +24,6 @@ function getScale (element) {
   let windowHeight = document.body.clientHeight
   return Math.min(windowWidth / width, windowHeight / height)
 }
-
 
 const useStyles = createUseStyles(theme => ({
   board: {
@@ -60,6 +58,7 @@ export default function Board () {
 
   const boardElement = useRef(null)
   const [zoom, setZoom] = useState(null)
+  const [displayedCard, setDisplayedCard] = useState(null)
   const [board, setBoard] = useState(streams)
   const c = useStyles(zoom)
 
@@ -78,13 +77,13 @@ export default function Board () {
       epoch: sourceDroppable[0],
       type: sourceDroppable[1],
       streamOwner: sourceDroppable[2],
-      owner: sourceDroppable[3],
+      owner: sourceDroppable[3]
     }
     const _destination = {
       epoch: destinationDroppable[0],
       type: destinationDroppable[1],
       streamOwner: destinationDroppable[2],
-      owner: destinationDroppable[3],
+      owner: destinationDroppable[3]
     }
 
 
@@ -118,20 +117,20 @@ export default function Board () {
           [_destination.streamOwner]: {
             ...originalBoard[_destination.streamOwner],
             [_source.epoch]: sourceEpoch,
-            [_destination.epoch]: destinationEpoch,
+            [_destination.epoch]: destinationEpoch
           }
         }
       } else {
         newBoard = {
           ...originalBoard,
-            [_destination.streamOwner]: {
+          [_destination.streamOwner]: {
             ...originalBoard[_destination.streamOwner],
             [_destination.epoch]: destinationEpoch
           },
           [_source.streamOwner]: {
             ...originalBoard[_source.streamOwner],
-            [_source.epoch]: sourceEpoch,
-          },
+            [_source.epoch]: sourceEpoch
+          }
         }
       }
 
@@ -139,12 +138,12 @@ export default function Board () {
     })
   }
 
-
   return (
     <div className={c.board} ref={boardElement}>
-      <DragDropContext onDragEnd={onDragEnd}>
-        <button className={c.zoomButton} onClick={handleZoomChange}>ZOOM</button>
+      <button className={c.zoomButton} onClick={handleZoomChange}>ZOOM</button>
+      {displayedCard && <Card data={displayedCard}/>}
 
+      <DragDropContext onDragEnd={onDragEnd}>
         {_streams.map(stream => (
           <div className={c[stream]} key={stream}>
             {_epochs.map(epoch =>
@@ -152,6 +151,7 @@ export default function Board () {
                 owner={IDs[stream]}
                 turnpoint={board[IDs[stream]][epoch]}
                 epoch={epoch}
+                setCard={setDisplayedCard}
                 key={epoch}
               />
             )}

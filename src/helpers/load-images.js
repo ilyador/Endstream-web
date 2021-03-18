@@ -1,5 +1,5 @@
 let illustrations = {}
-let UI = {}
+let UIimages = {}
 let imageArray = []
 
 
@@ -12,7 +12,7 @@ function importAll (collection, imported) {
 }
 
 importAll(illustrations, require.context('../img/illustrations', true, /\.(png|jpe?g|svg|webp)$/))
-importAll(UI, require.context('../img/ui', true, /\.(png|jpe?g|svg|webp)$/))
+importAll(UIimages, require.context('../img/ui', true, /\.(png|jpe?g|svg|webp)$/))
 
 
-export { illustrations, UI, imageArray }
+export { illustrations, UIimages, imageArray }

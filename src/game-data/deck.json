@@ -10,19 +10,19 @@
       "abilities": [
         {
           "price": "1x",
-          "Text": "Strike [1] After the strike, Mori must move downstream"
+          "text": "Strike [1] After the strike, Mori must move downstream"
         },
         {
           "price": "1m 1x",
-          "Text": "Disintegrate a female operator with 2 defense or less"
+          "text": "Disintegrate a female operator with 2 defense or less"
         },
         {
           "price": "2m 1x",
-          "Text": "Move and Strike [2] if Mori already moved this turn"
+          "text": "Move and Strike [2] if Mori already moved this turn"
         }
       ],
       "special": "Once Mori uses the move action he may Strike [1]",
-      "flavor-text": "I live by a code. The code says nothing about time travel."
+      "flavortext": "I live by a code. The code says nothing about time travel."
     },
     {
       "name": "Ben Storm",
@@ -34,18 +34,18 @@
       "abilities": [
         {
           "price": "1ms",
-          "Text": "Strike [1] and push target downstream"
+          "text": "Strike [1] and push target downstream"
         },
         {
           "price": "2ms",
-          "Text": "Ambush: Strike [2] any operator that move into his turnpoint on opponent's next turn"
+          "text": "Ambush: Strike [2] any operator that move into his turnpoint on opponent's next turn"
         },
         {
           "price": "2ms",
-          "Text": "Turn a human operator into a drone"
+          "text": "Turn a human operator into a drone"
         }
       ],
-      "flavor-text": "You think my ambitions are twisted? You haven't met my twin sister."
+      "flavortext": "You think my ambitions are twisted? You haven't met my twin sister."
     },
     {
       "name": "Angela Storm",
@@ -57,18 +57,18 @@
       "abilities": [
         {
           "price": "1mp",
-          "Text": "Strike [1] and push target upstream"
+          "text": "Strike [1] and push target upstream"
         },
         {
           "price": "2mp",
-          "Text": "Take control of opponent's drone for 2 turns"
+          "text": "Take control of opponent's drone for 2 turns"
         },
         {
           "price": "3mp",
-          "Text": "Disable all male operators in her turnpoint"
+          "text": "Disable all male operators in her turnpoint"
         }
       ],
-      "flavor-text": "Ask me if this is the worst I can do. Please!"
+      "flavortext": "Ask me if this is the worst I can do. Please!"
     },
     {
       "name": "Akane",
@@ -80,19 +80,19 @@
       "abilities": [
         {
           "price": "1p",
-          "Text": "Haven: Activate a disabled operator and give them +1 defense [until next turn]"
+          "text": "Haven: Activate a disabled operator and give them +1 defense [until next turn]"
         },
         {
           "price": "1p 1x",
-          "Text": "Disable all male operators [until next turn]"
+          "text": "Disable all male operators [until next turn]"
         },
         {
           "price": "2p",
-          "Text": "Take opponent's operator under your control [until next turn]"
+          "text": "Take opponent's operator under your control [until next turn]"
         }
       ],
       "special": "If Red Eye is in the same turnpoint with Mori, she must move away by the end of the turn, even if she has already moved.",
-      "flavor-text": "Not like this' I asked, but he had two needs of me."
+      "flavortext": "Not like this' I asked, but he had two needs of me."
     },
     {
       "name": "Jerusalem",
@@ -105,18 +105,18 @@
       "abilities": [
         {
           "price": "1ms",
-          "Text": "Disable an AI or drone operator [until next turn]"
+          "text": "Disable an AI or drone operator [until next turn]"
         },
         {
           "price": "2ms",
-          "Text": "Mark & Destroy: Disintegrate an operator with 1 defense"
+          "text": "Mark & Destroy: Disintegrate an operator with 1 defense"
         },
         {
           "price": "3ms",
-          "Text": "Strike [4] to a hideout"
+          "text": "Strike [4] to a hideout"
         }
       ],
-      "flavor-text": "You made me a false idol, but I became a true god."
+      "flavortext": "You made me a false idol, but I became a true god."
     },
     {
       "name": "Samarkand",
@@ -130,19 +130,19 @@
       "abilities": [
         {
           "price": "2x",
-          "Text": "Lockdown: opponent's operators can't move in or out of Samarkand turnpoint"
+          "text": "Lockdown: opponent's operators can't move in or out of Samarkand turnpoint"
         },
         {
           "price": "3x",
-          "Text": "Break down into 3 Tamerlans"
+          "text": "Break down into 3 Tamerlans"
         },
         {
           "price": "5x",
-          "Text": "Send all operators on the board to their original stream and epoch"
+          "text": "Send all operators on the board to their original stream and epoch"
         }
       ],
       "special": "Cannot move downstream. *For each disintegrated Tamerlan, Samarkand has 1 less defense on reintegration",
-      "flavor-text": "24 of us want to follow you, 7 disagree, and 3 want to kill you."
+      "flavortext": "24 of us want to follow you, 7 disagree, and 3 want to kill you."
     },
     {
       "name": "Tamerlan",
@@ -156,19 +156,19 @@
       "abilities": [
         {
           "price": "1m",
-          "Text": "Strike [1]"
+          "text": "Strike [1]"
         },
         {
           "price": "2x",
-          "Text": "Give another Tamerlan on the board +1 Strike [once per turn, until next turn]"
+          "text": "Give another Tamerlan on the board +1 Strike [once per turn, until next turn]"
         },
         {
           "price": "1s",
-          "Text": "Re-integrate Tamerlans back into Samarkand [all Tamerlans must be in the same turnpoint]"
+          "text": "Re-integrate Tamerlans back into Samarkand [all Tamerlans must be in the same turnpoint]"
         }
       ],
       "special": "Can move 2 times in a turn",
-      "flavor-text": "We came. We saw. We conquered."
+      "flavortext": "We came. We saw. We conquered."
     },
     {
       "name": "The Pale Man",
@@ -182,18 +182,18 @@
       "abilities": [
         {
           "price": "1ms",
-          "Text": "Strike [1] one century up or down-stream"
+          "text": "Strike [1] one century up or down-stream"
         },
         {
           "price": "2ms",
-          "Text": "Armor up: gain +2 defense"
+          "text": "Armor up: gain +2 defense"
         },
         {
           "price": "3ms",
-          "Text": "Strike [3]"
+          "text": "Strike [3]"
         }
       ],
-      "flavor-text": "I do not have higher functions."
+      "flavortext": "I do not have higher functions."
     },
     {
       "name": "Mia Star",
@@ -207,18 +207,18 @@
       "abilities": [
         {
           "price": "1mp",
-          "Text": "When moving, take an operator along. Does not count as a move action for that operator"
+          "text": "When moving, take an operator along. Does not count as a move action for that operator"
         },
         {
           "price": "3mp",
-          "Text": "Give +1 defense to all Orbital Strike operators on the board"
+          "text": "Give +1 defense to all Orbital Strike operators on the board"
         },
         {
           "price": "4mp",
-          "Text": "Strike [2] 3 times"
+          "text": "Strike [2] 3 times"
         }
       ],
-      "flavor-text": "My mind is a star and my palms are solar sails."
+      "flavortext": "My mind is a star and my palms are solar sails."
     },
     {
       "name": "Augur, Stream Phase Shaman",
@@ -231,19 +231,19 @@
       "abilities": [
         {
           "price": "1x",
-          "Text": "Channel: switch Augur with any disintegrated operator. Switch back if disabled."
+          "text": "Channel: switch Augur with any disintegrated operator. Switch back if disabled."
         },
         {
           "price": "1p 1x",
-          "Text": "Phase-out: no ability can be used upon the target of this ability"
+          "text": "Phase-out: no ability can be used upon the target of this ability"
         },
         {
           "price": "2p 1x",
-          "Text": "Stream-shade: create a double that mirrors Augur's actions in another stream, always in the same century. [see FAQ]"
+          "text": "Stream-shade: create a double that mirrors Augur's actions in another stream, always in the same century. [see FAQ]"
         }
       ],
       "special": "Pay (1x) to prolong Augur's ability for 1 turn",
-      "flavor-text": "The dead call to me from the void between the streams. I feed the living to them."
+      "flavortext": "The dead call to me from the void between the streams. I feed the living to them."
     },
     {
       "name": "Kim-Li",
@@ -256,19 +256,19 @@
       "abilities": [
         {
           "price": "2mp",
-          "Text": "Undo a strike action from opponent's previous turn."
+          "text": "Undo a strike action from opponent's previous turn."
         },
         {
           "price": "3mp",
-          "Text": "Strike [2] across stream"
+          "text": "Strike [2] across stream"
         },
         {
           "price": "2m 2mp",
-          "Text": "Disintegrate an operator activated on opponent's previous turn"
+          "text": "Disintegrate an operator activated on opponent's previous turn"
         }
       ],
       "special": "Cannot be struck by female operators",
-      "flavor-text": "I adore women, the pinnacle of their free will is slavery. All they need is the right master."
+      "flavortext": "I adore women, the pinnacle of their free will is slavery. All they need is the right master."
     },
     {
       "name": "Reclaimer",
@@ -282,19 +282,19 @@
       "abilities": [
         {
           "price": "1m 1x",
-          "Text": "Strike [2]"
+          "text": "Strike [2]"
         },
         {
           "price": "1m 1x",
-          "Text": "Lockdown: no operator can move in or out of Reclaimer's turnpoint"
+          "text": "Lockdown: no operator can move in or out of Reclaimer's turnpoint"
         },
         {
           "price": "1m 1x",
-          "Text": "Prevent spinning agenda [in its turnpoint]"
+          "text": "Prevent spinning agenda [in its turnpoint]"
         }
       ],
       "special": "*Can be activated in any turnpoint but cannot move on it's own",
-      "flavor-text": "Make room. Or don't."
+      "flavortext": "Make room. Or don't."
     },
     {
       "name": "Disruptor",
@@ -308,18 +308,18 @@
       "abilities": [
         {
           "price": "2x",
-          "Text": "Prevents stream-step into its location"
+          "text": "Prevents stream-step into its location"
         },
         {
           "price": "2x",
-          "Text": "Prevents upstream movement into its location"
+          "text": "Prevents upstream movement into its location"
         },
         {
           "price": "2x",
-          "Text": "Prevents downstream movement into its location"
+          "text": "Prevents downstream movement into its location"
         }
       ],
-      "flavor-text": "Access denied."
+      "flavortext": "Access denied."
     },
     {
       "name": "Sourayah the Bad Prophet",
@@ -331,19 +331,19 @@
       "abilities": [
         {
           "price": "1p 1x",
-          "Text": "Select a turnpoint upstream. A random* operator there gets +2 defense"
+          "text": "Select a turnpoint upstream. A random* operator there gets +2 defense"
         },
         {
           "price": "1p 1x",
-          "Text": "Select a turnpoint upstream. A random* operator there gets -2 defense"
+          "text": "Select a turnpoint upstream. A random* operator there gets -2 defense"
         },
         {
           "price": "1p 2x",
-          "Text": "Dark visions: choose a male operator upstream. During opponent's next turn that operator can't move and must use Strike ability on anyone he can."
+          "text": "Dark visions: choose a male operator upstream. During opponent's next turn that operator can't move and must use Strike ability on anyone he can."
         }
       ],
       "special": "Cannot move upstream. *random: see rules FAQ",
-      "flavor-text": "They all think they need me, freely willing to sacrifice so much. This is how my gift works."
+      "flavortext": "They all think they need me, freely willing to sacrifice so much. This is how my gift works."
     },
     {
       "name": "Aran",
@@ -357,18 +357,18 @@
       "abilities": [
         {
           "price": "2m",
-          "Text": "Strike [3]"
+          "text": "Strike [3]"
         },
         {
           "price": "3m",
-          "Text": "Strike [2] to any operator that used an ability preventing them from being attacked"
+          "text": "Strike [2] to any operator that used an ability preventing them from being attacked"
         },
         {
           "price": "1m 1x",
-          "Text": "Move into turnpoint that is restricted by a movement-preventing ability"
+          "text": "Move into turnpoint that is restricted by a movement-preventing ability"
         }
       ],
-      "flavor-text": "I am like the ham'sin: desert wind, dust, and pain."
+      "flavortext": "I am like the ham'sin: desert wind, dust, and pain."
     },
     {
       "name": "Sahar",
@@ -382,19 +382,19 @@
       "abilities": [
         {
           "price": "1x",
-          "Text": "Reactivate a disabled operator from Unit 707"
+          "text": "Reactivate a disabled operator from Unit 707"
         },
         {
           "price": "2sp",
-          "Text": "Reactivate any disabled operator and take control of them [until next turn]"
+          "text": "Reactivate any disabled operator and take control of them [until next turn]"
         },
         {
           "price": "1m 1sp",
-          "Text": "Reactivate all disabled operators in stream [until next turn]"
+          "text": "Reactivate all disabled operators in stream [until next turn]"
         }
       ],
       "special": "Can move 2 times in a turn",
-      "flavor-text": "If the desert sand does not do it first, I will drink all your body fluids."
+      "flavortext": "If the desert sand does not do it first, I will drink all your body fluids."
     },
     {
       "name": "Hamdi",
@@ -408,18 +408,18 @@
       "abilities": [
         {
           "price": "1x",
-          "Text": "Give +1 defense to an operator from Unit 707"
+          "text": "Give +1 defense to an operator from Unit 707"
         },
         {
           "price": "1m 1x",
-          "Text": "Give +1 defense to any operator"
+          "text": "Give +1 defense to any operator"
         },
         {
           "price": "2m 1x",
-          "Text": "Strike [3]"
+          "text": "Strike [3]"
         }
       ],
-      "flavor-text": "Blood sometimes gets mixed in my black coffee, I like the taste."
+      "flavortext": "Blood sometimes gets mixed in my black coffee, I like the taste."
     },
     {
       "name": "Marwa",
@@ -433,19 +433,19 @@
       "abilities": [
         {
           "price": "1ms",
-          "Text": "Move a unit 707 operator from current to any turnpoint"
+          "text": "Move a unit 707 operator from current to any turnpoint"
         },
         {
           "price": "2ms",
-          "Text": "Recall: move all operators of unit 707 to her location"
+          "text": "Recall: move all operators of unit 707 to her location"
         },
         {
           "price": "3ms",
-          "Text": "Disable all female operators in her turnpoint"
+          "text": "Disable all female operators in her turnpoint"
         }
       ],
       "special": "All members of unit 707 can be activated on the commander's location instead of their century",
-      "flavor-text": "Some women thought I was too ugly to give commands."
+      "flavortext": "Some women thought I was too ugly to give commands."
     },
     {
       "name": "Dr. Koh",
@@ -457,18 +457,18 @@
       "abilities": [
         {
           "price": "1x",
-          "Text": "Permanently change the sex of an operator"
+          "text": "Permanently change the sex of an operator"
         },
         {
           "price": "2s 2x",
-          "Text": "Viral decay: all operators on the board get -1 defense"
+          "text": "Viral decay: all operators on the board get -1 defense"
         },
         {
           "price": "2s 2x",
-          "Text": "Bring back a disintegrated operator, put them in 2200"
+          "text": "Bring back a disintegrated operator, put them in 2200"
         }
       ],
-      "flavor-text": "You see yourself as a whole, in form and mind, but you are not. Let me show you."
+      "flavortext": "You see yourself as a whole, in form and mind, but you are not. Let me show you."
     },
     {
       "name": "Ben Storm",
@@ -481,19 +481,19 @@
       "abilities": [
         {
           "price": "1x",
-          "Text": "Make a turnpoint any type of agenda until end of your turn"
+          "text": "Make a turnpoint any type of agenda until end of your turn"
         },
         {
           "price": "1s 1x",
-          "Text": "Prevent an operator anywhere from moving [until next turn]"
+          "text": "Prevent an operator anywhere from moving [until next turn]"
         },
         {
           "price": "2s 1x",
-          "Text": "Undo an action from opponent's previous turn [once per turn]"
+          "text": "Undo an action from opponent's previous turn [once per turn]"
         }
       ],
       "special": "When activated, disable Ben and Angela Storm [until next turn]",
-      "flavor-text": "Join me outside the box, dead and alive."
+      "flavortext": "Join me outside the box, dead and alive."
     },
     {
       "name": "Captain Shortspear",
@@ -505,18 +505,18 @@
       "abilities": [
         {
           "price": "2ms",
-          "Text": "Strike [2]"
+          "text": "Strike [2]"
         },
         {
           "price": "2ms",
-          "Text": "Move. After moving can't be a target of any ability [until next turn]"
+          "text": "Move. After moving can't be a target of any ability [until next turn]"
         },
         {
           "price": "3ms",
-          "Text": "Strike [2] at 2 targets"
+          "text": "Strike [2] at 2 targets"
         }
       ],
-      "flavor-text": "You won't pick me out in a crowd, not until my pistol is in your face."
+      "flavortext": "You won't pick me out in a crowd, not until my pistol is in your face."
     },
     {
       "name": "Soren Glasskin",
@@ -528,18 +528,18 @@
       "abilities": [
         {
           "price": "1x",
-          "Text": "Use an ability that any other other operator [in his turnpoint] may use [must pay it's price]"
+          "text": "Use an ability that any other other operator [in his turnpoint] may use [must pay it's price]"
         },
         {
           "price": "2x",
-          "Text": "Use an ability that any other operator in the same stream may use [must pay its price]"
+          "text": "Use an ability that any other operator in the same stream may use [must pay its price]"
         },
         {
           "price": "3x",
-          "Text": "Take control of an opponent's operator while opponent controls Soren for 2 turns"
+          "text": "Take control of an opponent's operator while opponent controls Soren for 2 turns"
         }
       ],
-      "flavor-text": "You keep calling me Soren, you really shouldn't."
+      "flavortext": "You keep calling me Soren, you really shouldn't."
     },
     {
       "name": "The Gray Baron",
@@ -551,18 +551,18 @@
       "abilities": [
         {
           "price": "1p 1x",
-          "Text": "Strike [2]"
+          "text": "Strike [2]"
         },
         {
           "price": "1p 1x",
-          "Text": "Spin agenda instantly without ripple effect"
+          "text": "Spin agenda instantly without ripple effect"
         },
         {
           "price": "1p 2x",
-          "Text": "Truce: make all friendly operators untouchable by any ability [until next turn]"
+          "text": "Truce: make all friendly operators untouchable by any ability [until next turn]"
         }
       ],
-      "flavor-text": "Men of power cast dark shadows. The closer a woman gets, the easier for her to hide in them."
+      "flavortext": "Men of power cast dark shadows. The closer a woman gets, the easier for her to hide in them."
     },
     {
       "name": "Dr. Archangel",
@@ -574,18 +574,18 @@
       "abilities": [
         {
           "price": "1m",
-          "Text": "Disintegrate an operator disabled on this turn"
+          "text": "Disintegrate an operator disabled on this turn"
         },
         {
           "price": "1m 1x",
-          "Text": "Give Mr. Archangel +2 defense"
+          "text": "Give Mr. Archangel +2 defense"
         },
         {
           "price": "2m 1x",
-          "Text": "Disable an operator [until next turn]"
+          "text": "Disable an operator [until next turn]"
         }
       ],
-      "flavor-text": "They never suspect."
+      "flavortext": "They never suspect."
     },
     {
       "name": "Mr. Archangel",
@@ -597,19 +597,19 @@
       "abilities": [
         {
           "price": "1s",
-          "Text": "Create a drone with Strike [1] (1m)/ 1 Defense"
+          "text": "Create a drone with Strike [1] (1m)/ 1 Defense"
         },
         {
           "price": "1s 2x",
-          "Text": "Augment: Give another operator +2 for their next Strike"
+          "text": "Augment: Give another operator +2 for their next Strike"
         },
         {
           "price": "2s",
-          "Text": "EMP Strike: Disable all opponent's drones [in his turnpoint, until next turn]"
+          "text": "EMP Strike: Disable all opponent's drones [in his turnpoint, until next turn]"
         }
       ],
       "special": "Can build up to 3 drones. Drones destroyed on any strike or when Mr. Archangel is disabled",
-      "flavor-text": "If the devil grants you your wish, is he still the devil? Or do you become the devil by paying his price?"
+      "flavortext": "If the devil grants you your wish, is he still the devil? Or do you become the devil by paying his price?"
     }
   ],
   "hideouts": [
@@ -621,7 +621,7 @@
       "active": "Move up/downstream",
       "price": "1x",
       "passive": "Doubles the activated agenda [on Ural's turnpoint, once per turn]",
-      "flavor-text": "Tovarisch Capitan, we're in range of their missiles Keep course, they won't see us in range of their fists!"
+      "flavortext": "Tovarisch Capitan, we're in range of their missiles Keep course, they won't see us in range of their fists!"
     },
     {
       "name": "Zongshan",
@@ -631,7 +631,7 @@
       "active": "Send operator to any turnpoint",
       "price": "2x",
       "passive": "Turns activated agenda to any type [on Zongshan's turnpoint, once per turn]",
-      "flavor-text": "Too many changes impede progress; we need silence."
+      "flavortext": "Too many changes impede progress; we need silence."
     },
     {
       "name": "Avalon",
@@ -642,7 +642,7 @@
       "price": "2x",
       "passive": "Can be activated as an agenda providing (1x)",
       "special": "Phased-out: Positioned as if located in a third stream between the 2 players. [see FAQ]",
-      "flavor-text": "One day this will be the busiest black market in our solar system; we need only to keep it hidden for a century."
+      "flavortext": "One day this will be the busiest black market in our solar system; we need only to keep it hidden for a century."
     }
   ]
 }
