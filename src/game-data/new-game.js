@@ -30,7 +30,7 @@ export default {
       2300: {
         agenda: 'sp',
         operators: {
-          player2: ['Captain-Shortspear']
+          player2: ['Captain-Shortspear', 'Kim-Li']
         }
       }
     },

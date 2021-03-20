@@ -246,12 +246,12 @@
       "flavortext": "The dead call to me from the void between the streams. I feed the living to them."
     },
     {
-      "name": "Kim-Li",
+      "name": "Kim Li",
       "id": "Kim-Li",
       "sub-type": "Orbital Strike Team",
       "century": 2300,
       "sex": "m",
-      "price": "2m 2mp",
+      "price": "2mp 2m",
       "defense": 2,
       "abilities": [
         {

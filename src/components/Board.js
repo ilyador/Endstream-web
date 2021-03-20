@@ -141,7 +141,7 @@ export default function Board () {
   return (
     <div className={c.board} ref={boardElement}>
       <button className={c.zoomButton} onClick={handleZoomChange}>ZOOM</button>
-      {displayedCard && <Card data={displayedCard}/>}
+      {displayedCard && <Card data={displayedCard} setCard={setDisplayedCard}/>}
 
       <DragDropContext onDragEnd={onDragEnd}>
         {_streams.map(stream => (
