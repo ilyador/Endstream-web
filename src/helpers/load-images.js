@@ -6,7 +6,7 @@ let imageArray = []
 function importAll (collection, imported) {
   imported.keys().forEach(img => {
     let key = img.substr(0, img.lastIndexOf('.')).replace('./', '')
-    collection[key] = imported(img)
+    collection[key] = imported(img).default
     imageArray.push(img)
   })
 }
